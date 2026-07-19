@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { useGithubCommits } from '@/hooks/useGithubCommits';
-import { ActivityCalendar, ThemeInput } from 'react-activity-calendar';
+import { ActivityCalendar, type ThemeInput } from 'react-activity-calendar';
 
 export default function Progress() {
   const { phases, progress, loading } = useCurriculum();
