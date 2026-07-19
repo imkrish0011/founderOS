@@ -21,7 +21,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.4.0",
     "firebase": "^10.12.2",
-    "framer-motion": "^10.16.4",
+    "framer-motion": "^12.42.2",
     "lucide-react": "^0.395.0",
     "react": "^19.2.7",
     "react-activity-calendar": "^3.2.1",

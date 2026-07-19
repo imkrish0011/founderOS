@@ -137,7 +137,7 @@ function DroppableColumn({ status, tasks, onAddTask }: { status: TaskStatus, tas
 }
 
 export default function ArchViz() {
-  const { metrics, loading, updateMetrics, saveTasks } = useArchViz();
+  const { metrics, updateMetrics, saveTasks } = useArchViz();
   const [localTasks, setLocalTasks] = useState<ArchVizTask[]>([]);
 
   useEffect(() => {

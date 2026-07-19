@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { CheckCircle2, Circle, Clock, Zap, Target, BookOpen, Presentation, Code2 } from 'lucide-react';
+import { useState, useMemo } from 'react';
+import { BookOpen, CheckCircle2, Circle, Trophy, Target, Clock, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useCurriculum } from '@/hooks/useCurriculum';
 
@@ -23,7 +24,6 @@ export default function Learning() {
 
       <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
         {phases.map((phase, phaseIndex) => {
-          const isEven = phaseIndex % 2 === 0;
           return (
             <div key={phase.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
               

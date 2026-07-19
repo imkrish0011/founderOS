@@ -101,8 +101,6 @@ export default function Progress() {
               data={calendarData} 
               theme={explicitTheme}
               colorScheme={theme as any}
-              hideTotalCount={true}
-              hideColorLegend={false}
               blockRadius={2}
               blockSize={12}
             />
