@@ -1,0 +1,159 @@
+import { motion } from 'framer-motion';
+import { CheckCircle2, Circle, Clock, Zap, Target, BookOpen, Presentation, Code2 } from 'lucide-react';
+import { Card } from '@/components/ui/card';
+import { useCurriculum } from '@/hooks/useCurriculum';
+
+export default function Learning() {
+  const { phases, progress, loading, toggleTopic, toggleProject } = useCurriculum();
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <p className="text-muted-foreground animate-pulse">Loading Curriculum...</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-5xl mx-auto space-y-12 pb-12">
+      <div>
+        <h1 className="text-3xl font-light text-foreground mb-1 tracking-tight">Learning Path</h1>
+        <p className="text-muted-foreground text-sm tracking-wide">Structured Curriculum & Progress</p>
+      </div>
+
+      <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
+        {phases.map((phase, phaseIndex) => {
+          const isEven = phaseIndex % 2 === 0;
+          return (
+            <div key={phase.id} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+              
+              {/* Timeline Icon */}
+              <div className="flex items-center justify-center w-10 h-10 rounded-full border-4 border-charcoal-950 bg-charcoal-900 text-muted-foreground group-[.is-active]:bg-white/10 group-[.is-active]:text-white shadow-[0_0_0_4px_rgba(20,20,20,1)] z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
+                <BookOpen className="w-4 h-4" />
+              </div>
+
+              {/* Content Card */}
+              <Card className={`glass-card w-[calc(100%-4rem)] md:w-[calc(50%-3rem)] p-6 md:p-8 hover:border-white/20 transition-all duration-300`}>
+                <div className="flex flex-col gap-4">
+                  
+                  {/* Header */}
+                  <div>
+                    <h3 className="text-2xl font-light mb-2">{phase.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{phase.goal}</p>
+                  </div>
+
+                  {/* Meta (Duration & Difficulty) */}
+                  <div className="flex flex-wrap gap-3 mt-2">
+                    {phase.duration && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 text-xs text-muted-foreground border border-white/5">
+                        <Clock className="w-3.5 h-3.5" />
+                        {phase.duration}
+                      </span>
+                    )}
+                    {phase.difficulty && (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/5 text-xs text-muted-foreground border border-white/5">
+                        <Zap className="w-3.5 h-3.5 text-calmBlue" />
+                        Difficulty: {phase.difficulty.replace(/⭐/g, '★').replace(/☆/g, '☆')}
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="w-full h-px bg-white/10 my-4" />
+
+                  {/* Modules & Topics */}
+                  {phase.modules?.length > 0 && (
+                    <div className="space-y-6">
+                      {phase.modules.map((mod: any, mIdx: number) => (
+                        <div key={mIdx}>
+                          <h4 className="text-sm font-medium uppercase tracking-widest text-white/70 mb-3 flex items-center gap-2">
+                            <Target className="w-3.5 h-3.5" />
+                            {mod.title}
+                          </h4>
+                          <div className="space-y-2 pl-5 border-l border-white/10">
+                            {mod.topics?.map((topic: any, tIdx: number) => {
+                              const topicId = `${phase.id}_${mIdx}_${tIdx}`;
+                              const isCompleted = progress.completedTopics.includes(topicId);
+                              
+                              return (
+                                <div key={tIdx} className="group/topic">
+                                  <button 
+                                    onClick={() => toggleTopic(topicId)}
+                                    className="flex items-start gap-3 w-full text-left hover:bg-white/5 p-2 rounded-lg transition-colors"
+                                  >
+                                    <div className="mt-0.5 shrink-0">
+                                      {isCompleted ? (
+                                        <CheckCircle2 className="w-4 h-4 text-calmGreen" />
+                                      ) : (
+                                        <Circle className="w-4 h-4 text-muted-foreground group-hover/topic:text-white transition-colors" />
+                                      )}
+                                    </div>
+                                    <div className="flex-1">
+                                      <span className={`text-sm ${isCompleted ? 'text-muted-foreground line-through opacity-50' : 'text-white'}`}>
+                                        {topic.title}
+                                      </span>
+                                      {/* Sub-items (learn points) */}
+                                      {!isCompleted && topic.learn?.length > 0 && (
+                                        <ul className="mt-2 space-y-1">
+                                          {topic.learn.map((l: string, i: number) => (
+                                            <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
+                                              <div className="w-1 h-1 rounded-full bg-white/20" />
+                                              {l}
+                                            </li>
+                                          ))}
+                                        </ul>
+                                      )}
+                                    </div>
+                                  </button>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* Projects */}
+                  {phase.projects?.length > 0 && (
+                    <>
+                      <div className="w-full h-px bg-white/10 my-4" />
+                      <div>
+                        <h4 className="text-sm font-medium uppercase tracking-widest text-white/70 mb-3 flex items-center gap-2">
+                          <Code2 className="w-3.5 h-3.5" />
+                          Mini Projects
+                        </h4>
+                        <div className="space-y-2">
+                          {phase.projects.map((project: string, pIdx: number) => {
+                            const projectId = `${phase.id}_proj_${pIdx}`;
+                            const isCompleted = progress.completedProjects.includes(projectId);
+                            return (
+                              <button 
+                                key={pIdx}
+                                onClick={() => toggleProject(projectId)}
+                                className="flex items-center gap-3 w-full text-left bg-white/5 hover:bg-white/10 p-3 rounded-lg transition-colors border border-white/5"
+                              >
+                                {isCompleted ? (
+                                  <CheckCircle2 className="w-5 h-5 text-calmGreen shrink-0" />
+                                ) : (
+                                  <Circle className="w-5 h-5 text-muted-foreground shrink-0" />
+                                )}
+                                <span className={`text-sm font-medium ${isCompleted ? 'text-muted-foreground line-through opacity-50' : 'text-white'}`}>
+                                  {project}
+                                </span>
+                              </button>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </>
+                  )}
+
+                </div>
+              </Card>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,982 @@
+[
+  {
+    "id": "j3lg9odsz",
+    "type": "article",
+    "title": "3Blue1Brown — Essence of Linear Algebra",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "dbkfs0tk6",
+    "type": "video",
+    "title": "MIT OpenCourseWare (Linear Algebra)",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "imbpi7w39",
+    "type": "article",
+    "title": "Khan Academy",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "r3p8mpb7z",
+    "type": "article",
+    "title": "Solve 50 matrix problems",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "b9mfq6jbj",
+    "type": "article",
+    "title": "Implement matrix multiplication in Python",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "vz2610a77",
+    "type": "article",
+    "title": "Implement Gaussian Elimination",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "u6ge6k7oq",
+    "type": "article",
+    "title": "3Blue1Brown Calculus",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "zr5u8nrxt",
+    "type": "article",
+    "title": "Khan Academy Calculus",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "eky36wmug",
+    "type": "article",
+    "title": "40 differentiation problems",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "htu0yu6v4",
+    "type": "article",
+    "title": "Visualize gradient descent",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "fwhtbacsy",
+    "type": "article",
+    "title": "StatQuest",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "phl37gaw4",
+    "type": "article",
+    "title": "Khan Academy",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "7e5xukdia",
+    "type": "article",
+    "title": "StatQuest Statistics Playlist",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "6afyqfoo3",
+    "type": "article",
+    "title": "DeepLearning.AI Optimization lectures",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "8yo83a1dk",
+    "type": "paper",
+    "title": "NumPy Documentation",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "uvtu5cf20",
+    "type": "video",
+    "title": "Kaggle NumPy Course",
+    "author": "Phase III: Mathematics for Artificial Intelligence",
+    "year": "2026",
+    "tags": [
+      "Phase III"
+    ]
+  },
+  {
+    "id": "alo61bmef",
+    "type": "article",
+    "title": "Harvard CS50 (Weeks 0–2)",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "0b3f4rtfe",
+    "type": "article",
+    "title": "Write pseudocode for 20 everyday problems.",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "a26cexqk0",
+    "type": "article",
+    "title": "Convert pseudocode into Python.",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "gos8mg5nc",
+    "type": "article",
+    "title": "Abdul Bari – Time Complexity",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "rqczitpt4",
+    "type": "article",
+    "title": "VisuAlgo",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "nrhx4kc7o",
+    "type": "article",
+    "title": "NeetCode DSA Playlist",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "wnpbnw8jz",
+    "type": "article",
+    "title": "Abdul Bari DSA",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "jva73z4hd",
+    "type": "article",
+    "title": "VisuAlgo",
+    "author": "Phase II: Computer Science Fundamentals",
+    "year": "2026",
+    "tags": [
+      "Phase II"
+    ]
+  },
+  {
+    "id": "yjr9y5zyv",
+    "type": "video",
+    "title": "Andrew Ng – Machine Learning Specialization (Course)",
+    "author": "Phase IV: Machine Learning",
+    "year": "2026",
+    "tags": [
+      "Phase IV"
+    ]
+  },
+  {
+    "id": "5dixctm1h",
+    "type": "video",
+    "title": "Google Machine Learning Crash Course",
+    "author": "Phase IV: Machine Learning",
+    "year": "2026",
+    "tags": [
+      "Phase IV"
+    ]
+  },
+  {
+    "id": "oz26giq57",
+    "type": "paper",
+    "title": "scikit-learn Documentation",
+    "author": "Phase IV: Machine Learning",
+    "year": "2026",
+    "tags": [
+      "Phase IV"
+    ]
+  },
+  {
+    "id": "ymy6z82ac",
+    "type": "article",
+    "title": "Iris Dataset",
+    "author": "Phase IV: Machine Learning",
+    "year": "2026",
+    "tags": [
+      "Phase IV"
+    ]
+  },
+  {
+    "id": "ngeogxyzq",
+    "type": "article",
+    "title": "Wine Dataset",
+    "author": "Phase IV: Machine Learning",
+    "year": "2026",
+    "tags": [
+      "Phase IV"
+    ]
+  },
+  {
+    "id": "vg0lm23sh",
+    "type": "video",
+    "title": "Hugging Face LLM Course",
+    "author": "Phase IX: LLM Engineering",
+    "year": "2026",
+    "tags": [
+      "Phase IX"
+    ]
+  },
+  {
+    "id": "948znncch",
+    "type": "book",
+    "title": "OpenAI Cookbook",
+    "author": "Phase IX: LLM Engineering",
+    "year": "2026",
+    "tags": [
+      "Phase IX"
+    ]
+  },
+  {
+    "id": "ryomkh0vk",
+    "type": "article",
+    "title": "Andrej Karpathy: Let's Build GPT",
+    "author": "Phase IX: LLM Engineering",
+    "year": "2026",
+    "tags": [
+      "Phase IX"
+    ]
+  },
+  {
+    "id": "zi6dfykpr",
+    "type": "paper",
+    "title": "https://code.visualstudio.com/docs",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "lxa6fy5e3",
+    "type": "video",
+    "title": "freeCodeCamp — VS Code Full Course",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "7mub0afeu",
+    "type": "article",
+    "title": "Install VS Code",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "0rfa0oh0w",
+    "type": "article",
+    "title": "Configure Python extension",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "lyxno2tpo",
+    "type": "article",
+    "title": "Configure Git integration",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "s3onvrydg",
+    "type": "article",
+    "title": "Learn the debugger",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "x3awhz2n5",
+    "type": "article",
+    "title": "Build and debug a Python project inside VS Code.",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "3av2sjb91",
+    "type": "paper",
+    "title": "https://git-scm.com/docs",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "b8t49edvc",
+    "type": "video",
+    "title": "Traversy Media — Git & GitHub Crash Course",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "t6do36rlv",
+    "type": "article",
+    "title": "Create a repository",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "t1i13kmbe",
+    "type": "article",
+    "title": "Commit changes",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "mvdlvrvj3",
+    "type": "article",
+    "title": "Create branches",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "famsh5ths",
+    "type": "article",
+    "title": "Merge branches",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "ch0jnm8h6",
+    "type": "article",
+    "title": "Push to GitHub",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "wjcdr23az",
+    "type": "article",
+    "title": "Linux Journey",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "t3790fzi0",
+    "type": "book",
+    "title": "The Linux Command Line (Book)",
+    "author": "Phase I: Foundations",
+    "year": "2026",
+    "tags": [
+      "Phase I"
+    ]
+  },
+  {
+    "id": "a39xhw0kc",
+    "type": "article",
+    "title": "Illustrated Transformer",
+    "author": "Phase VIII: Transformers",
+    "year": "2026",
+    "tags": [
+      "Phase VIII"
+    ]
+  },
+  {
+    "id": "cknmtnisg",
+    "type": "article",
+    "title": "Stanford CS25 (Transformers)",
+    "author": "Phase VIII: Transformers",
+    "year": "2026",
+    "tags": [
+      "Phase VIII"
+    ]
+  },
+  {
+    "id": "yuf97j3gv",
+    "type": "video",
+    "title": "Hugging Face Course",
+    "author": "Phase VIII: Transformers",
+    "year": "2026",
+    "tags": [
+      "Phase VIII"
+    ]
+  },
+  {
+    "id": "kszlnzjdv",
+    "type": "article",
+    "title": "DeepLearning.AI NLP Specialization",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "1gkixgn41",
+    "type": "paper",
+    "title": "NLTK Documentation",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "wyxbniwq0",
+    "type": "paper",
+    "title": "spaCy Documentation",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "77731g6o1",
+    "type": "video",
+    "title": "Hugging Face Course",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "zmbxnciyd",
+    "type": "paper",
+    "title": "Hugging Face Documentation",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "dv0nrimm2",
+    "type": "article",
+    "title": "NLTK",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "thttysek0",
+    "type": "article",
+    "title": "spaCy",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "niuka1s66",
+    "type": "article",
+    "title": "Hugging Face Transformers",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "pce0f0wp6",
+    "type": "article",
+    "title": "datasets",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "9pqjadgzy",
+    "type": "article",
+    "title": "sentence-transformers",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "40cq6w08x",
+    "type": "article",
+    "title": "Word2Vec",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "xupqynuxe",
+    "type": "article",
+    "title": "GloVe",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "5evf7j4g0",
+    "type": "article",
+    "title": "Attention Is All You Need (preview)",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "079817pde",
+    "type": "article",
+    "title": "BERT: Pre-training of Deep Bidirectional Transformers",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "tr5m7zwwn",
+    "type": "article",
+    "title": "Spam Detection",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "dnmika5zq",
+    "type": "article",
+    "title": "Language Detection",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "o9ghky1hk",
+    "type": "article",
+    "title": "Resume Classifier",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "go80ib5z4",
+    "type": "article",
+    "title": "News Classification",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "jr2cngv63",
+    "type": "article",
+    "title": "Data Collection",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "gztwfjlqy",
+    "type": "article",
+    "title": "Cleaning",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "9fzipm5jx",
+    "type": "article",
+    "title": "Training",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "p6mdqp6vj",
+    "type": "article",
+    "title": "Evaluation",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "39n7y1ezq",
+    "type": "article",
+    "title": "Deployment",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "hnyxdvzqs",
+    "type": "article",
+    "title": "Read one NLP paper",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "8y8aa22yf",
+    "type": "book",
+    "title": "Build one notebook",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "hstyrqaun",
+    "type": "article",
+    "title": "Fine-tune one model",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "yi13g9x68",
+    "type": "article",
+    "title": "Push five GitHub commits",
+    "author": "Phase VII: Natural Language Processing (NLP)",
+    "year": "2026",
+    "tags": [
+      "Phase VII"
+    ]
+  },
+  {
+    "id": "2ypchvf89",
+    "type": "paper",
+    "title": "OpenCV Documentation",
+    "author": "Phase VI: Computer Vision",
+    "year": "2026",
+    "tags": [
+      "Phase VI"
+    ]
+  },
+  {
+    "id": "8xi94pif2",
+    "type": "article",
+    "title": "PyTorch Vision Tutorials",
+    "author": "Phase VI: Computer Vision",
+    "year": "2026",
+    "tags": [
+      "Phase VI"
+    ]
+  },
+  {
+    "id": "ptg34dir1",
+    "type": "article",
+    "title": "Stanford CS231n (Image Basics)",
+    "author": "Phase VI: Computer Vision",
+    "year": "2026",
+    "tags": [
+      "Phase VI"
+    ]
+  },
+  {
+    "id": "0zhvlj9fh",
+    "type": "article",
+    "title": "3Blue1Brown — Neural Networks",
+    "author": "Phase V: Deep Learning",
+    "year": "2026",
+    "tags": [
+      "Phase V"
+    ]
+  },
+  {
+    "id": "w14jmes2a",
+    "type": "article",
+    "title": "DeepLearning.AI — Neural Networks and Deep Learning",
+    "author": "Phase V: Deep Learning",
+    "year": "2026",
+    "tags": [
+      "Phase V"
+    ]
+  },
+  {
+    "id": "6r15ta57z",
+    "type": "paper",
+    "title": "PyTorch Documentation",
+    "author": "Phase V: Deep Learning",
+    "year": "2026",
+    "tags": [
+      "Phase V"
+    ]
+  },
+  {
+    "id": "ya567hfzw",
+    "type": "article",
+    "title": "Stanford CS231n",
+    "author": "Phase V: Deep Learning",
+    "year": "2026",
+    "tags": [
+      "Phase V"
+    ]
+  },
+  {
+    "id": "h924yqm0g",
+    "type": "article",
+    "title": "PyTorch Tutorials",
+    "author": "Phase V: Deep Learning",
+    "year": "2026",
+    "tags": [
+      "Phase V"
+    ]
+  },
+  {
+    "id": "tfpi9wdvr",
+    "type": "paper",
+    "title": "PhysicsNeMo Documentation",
+    "author": "Phase XIII: AI for Physics",
+    "year": "2026",
+    "tags": [
+      "Phase XIII"
+    ]
+  },
+  {
+    "id": "dmsq66v4y",
+    "type": "paper",
+    "title": "DeepXDE Documentation",
+    "author": "Phase XIII: AI for Physics",
+    "year": "2026",
+    "tags": [
+      "Phase XIII"
+    ]
+  },
+  {
+    "id": "6zcaw5t0x",
+    "type": "article",
+    "title": "NVIDIA Modulus (Overview)",
+    "author": "Phase XIII: AI for Physics",
+    "year": "2026",
+    "tags": [
+      "Phase XIII"
+    ]
+  },
+  {
+    "id": "yx9ai2iw7",
+    "type": "article",
+    "title": "Stanford CS329S (Machine Learning Systems Design)",
+    "author": "Phase XII: AI Research",
+    "year": "2026",
+    "tags": [
+      "Phase XII"
+    ]
+  },
+  {
+    "id": "ecuy8utko",
+    "type": "article",
+    "title": "\"The Craft of Research\"",
+    "author": "Phase XII: AI Research",
+    "year": "2026",
+    "tags": [
+      "Phase XII"
+    ]
+  },
+  {
+    "id": "xhnjtri1c",
+    "type": "article",
+    "title": "Papers With Code",
+    "author": "Phase XII: AI Research",
+    "year": "2026",
+    "tags": [
+      "Phase XII"
+    ]
+  },
+  {
+    "id": "atgemrfbv",
+    "type": "book",
+    "title": "Sutton & Barto — Reinforcement Learning (Book)",
+    "author": "Phase XI: Reinforcement Learning",
+    "year": "2026",
+    "tags": [
+      "Phase XI"
+    ]
+  },
+  {
+    "id": "xvwnfq71m",
+    "type": "article",
+    "title": "David Silver RL Lectures",
+    "author": "Phase XI: Reinforcement Learning",
+    "year": "2026",
+    "tags": [
+      "Phase XI"
+    ]
+  },
+  {
+    "id": "5oi2uc1u0",
+    "type": "article",
+    "title": "OpenAI Spinning Up",
+    "author": "Phase XI: Reinforcement Learning",
+    "year": "2026",
+    "tags": [
+      "Phase XI"
+    ]
+  },
+  {
+    "id": "k3fqjavwx",
+    "type": "article",
+    "title": "Designing Machine Learning Systems (Chip Huyen)",
+    "author": "Phase X: AI Systems & MLOps",
+    "year": "2026",
+    "tags": [
+      "Phase X"
+    ]
+  },
+  {
+    "id": "m2gg4j349",
+    "type": "paper",
+    "title": "Google MLOps Documentation",
+    "author": "Phase X: AI Systems & MLOps",
+    "year": "2026",
+    "tags": [
+      "Phase X"
+    ]
+  },
+  {
+    "id": "89nz4zr41",
+    "type": "article",
+    "title": "Microsoft AI Architecture Center",
+    "author": "Phase X: AI Systems & MLOps",
+    "year": "2026",
+    "tags": [
+      "Phase X"
+    ]
+  }
+]

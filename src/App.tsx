@@ -1,0 +1,73 @@
+import { useEffect } from 'react';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import { auth } from '@/lib/firebase';
+import { useAuth } from '@/store/useAuth';
+import { Loader2 } from 'lucide-react';
+
+import Login from '@/pages/Login';
+import Dashboard from '@/pages/Dashboard';
+import ArchViz from '@/pages/ArchViz';
+import Learning from '@/pages/Learning';
+import Library from '@/pages/Library';
+import Journal from '@/pages/Journal';
+import Progress from '@/pages/Progress';
+import Focus from '@/pages/Focus';
+import AppLayout from '@/components/layout/AppLayout';
+
+function ProtectedRoute({ children }: { children: React.ReactNode }) {
+  const { user, isLoading } = useAuth();
+
+  if (isLoading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-background">
+        <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+      </div>
+    );
+  }
+
+  if (!user) {
+    return <Navigate to="/login" replace />;
+  }
+
+  return children;
+}
+
+function App() {
+  const { setUser, setLoading } = useAuth();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setUser(user);
+      setLoading(false);
+    });
+    return () => unsubscribe();
+  }, [setUser, setLoading]);
+
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/login" element={<Login />} />
+        
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <AppLayout />
+            </ProtectedRoute>
+          }
+        >
+          <Route index element={<Dashboard />} />
+          <Route path="archviz" element={<ArchViz />} />
+          <Route path="learning" element={<Learning />} />
+          <Route path="library" element={<Library />} />
+          <Route path="journal" element={<Journal />} />
+          <Route path="progress" element={<Progress />} />
+          <Route path="focus" element={<Focus />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;

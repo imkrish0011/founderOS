@@ -1,0 +1,1560 @@
+[
+  {
+    "id": "FounderOS_Curriculum_Phase_I_Foundations",
+    "title": "Phase I Completion Checklist",
+    "goal": "Build a rock-solid foundation in programming, mathematics, tooling, and problem solving before touching Machine Learning. Become comfortable writing Python without relying on tutorials. 1. Variables 2. Data Types 3. Operators 4. Strings 5. Input & Output 6. Conditional Statements 7. Loops 8. Functions 9. Lists 10. Tuples 11. Sets 12. Dictionaries 13. File Handling 14. Object-Oriented Programming 15. Modules & Packages",
+    "duration": "8–12 Weeks",
+    "difficulty": "⭐☆☆☆☆",
+    "modules": [
+      {
+        "title": "Module 1 — Development Environment",
+        "topics": [
+          {
+            "title": "Topic 1 — Visual Studio Code",
+            "learn": [
+              "Interface",
+              "Explorer",
+              "Extensions",
+              "Integrated Terminal",
+              "Debugger",
+              "Search",
+              "Workspace",
+              "Settings",
+              "Profiles"
+            ]
+          },
+          {
+            "title": "Topic 2 — Git & GitHub",
+            "learn": [
+              "Repository",
+              "Commit",
+              "Branch",
+              "Merge",
+              "Clone",
+              "Pull",
+              "Push",
+              "Remote",
+              "Tags",
+              ".gitignore"
+            ]
+          },
+          {
+            "title": "Topic 3 — Linux Terminal",
+            "learn": [
+              "pwd",
+              "ls",
+              "cd",
+              "mkdir",
+              "touch",
+              "cp",
+              "mv",
+              "rm",
+              "cat",
+              "grep",
+              "chmod",
+              "find"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Python Programming",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "Version control your Python Calculator.",
+      "Calculator",
+      "Quiz App",
+      "Password Generator",
+      "Expense Tracker",
+      "Student Management System",
+      "Library Management System",
+      "CLI Toolkit",
+      "Solve 15 Python problems",
+      "Push 5 GitHub commits",
+      "Build one mini project",
+      "Write one learning journal",
+      "Review previous topics",
+      "[ ] Calculator",
+      "[ ] Quiz App",
+      "[ ] Expense Tracker",
+      "[ ] Student Management System",
+      "[ ] CLI Toolkit",
+      "You should be able to build medium-sized Python applications independently before moving to Phase II."
+    ],
+    "checklist": [
+      "VS Code",
+      "Git",
+      "Linux",
+      "Variables",
+      "Data Types",
+      "Operators",
+      "Strings",
+      "Input & Output",
+      "Conditions",
+      "Loops",
+      "Functions",
+      "Collections",
+      "File Handling",
+      "OOP",
+      "Modules"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_II_Computer_Science_Fundamentals",
+    "title": "Phase II: Computer Science Fundamentals",
+    "goal": "Develop the problem-solving and computer science foundations required for AI engineering and large-scale software systems.",
+    "duration": "10–14 Weeks",
+    "difficulty": "⭐⭐☆☆☆",
+    "modules": [
+      {
+        "title": "Module 1 — Computational Thinking",
+        "topics": [
+          {
+            "title": "Module 1 — Computational Thinking Topics",
+            "learn": [
+              "Problem decomposition",
+              "Pattern recognition",
+              "Abstraction",
+              "Algorithms",
+              "Flowcharts",
+              "Pseudocode",
+              "Big O",
+              "Big Omega",
+              "Big Theta",
+              "Best, average, worst case",
+              "Amortized analysis (intro)",
+              "Binary Search",
+              "Two Pointers",
+              "Sliding Window",
+              "Greedy",
+              "Divide & Conquer",
+              "Backtracking",
+              "Dynamic Programming (intro)",
+              "150 LeetCode problems",
+              "50 HackerRank problems",
+              "Clean Code",
+              "Naming",
+              "SOLID Principles",
+              "Refactoring",
+              "Testing Basics",
+              "Debugging",
+              "Logging",
+              "Clean Code (selected chapters)",
+              "Refactoring Guru",
+              "Custom Dynamic Array",
+              "Stack",
+              "Queue",
+              "Linked List",
+              "HashMap",
+              "File Search Engine",
+              "Contact Manager",
+              "URL Shortener (local)",
+              "Indexing",
+              "Search",
+              "Ranking (basic)",
+              "CLI interface",
+              "25 DSA problems",
+              "5 GitHub commits",
+              "1 mini project",
+              "Review weak topics"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Time & Space Complexity",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Data Structures",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Algorithms",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Software Engineering",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] Custom Data Structures",
+      "[ ] Mini Search Engine",
+      "You should confidently solve medium-level DSA problems and design clean software before beginning Mathematics and Machine Learning."
+    ],
+    "checklist": [
+      "Big O",
+      "Arrays",
+      "Linked Lists",
+      "Stack",
+      "Queue",
+      "Hash Table",
+      "Trees",
+      "Graphs",
+      "Binary Search",
+      "Two Pointers",
+      "Sliding Window",
+      "Greedy",
+      "Backtracking",
+      "Dynamic Programming (Intro)"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_III_Mathematics_for_AI",
+    "title": "Phase III: Mathematics for Artificial Intelligence",
+    "goal": "Build the mathematical intuition required to truly understand machine learning, deep learning, optimization, and research papers. Mathematics is the language of AI. You are not learning math to solve textbook problems—you are learning it to understand algorithms, optimize neural networks, read research papers, and build new models.",
+    "duration": "12–16 Weeks",
+    "difficulty": "⭐⭐⭐☆☆",
+    "modules": [
+      {
+        "title": "Module 1 — Linear Algebra",
+        "topics": [
+          {
+            "title": "Module 1 — Linear Algebra Topics",
+            "learn": [
+              "Scalars, Vectors, Matrices, Tensors",
+              "Matrix Operations",
+              "Matrix Multiplication",
+              "Identity & Inverse",
+              "Rank",
+              "Determinant",
+              "Eigenvalues & Eigenvectors",
+              "Singular Value Decomposition (Intro)",
+              "Functions",
+              "Limits",
+              "Derivatives",
+              "Partial Derivatives",
+              "Chain Rule",
+              "Gradient",
+              "Gradient Descent",
+              "Integrals (basic)",
+              "Probability Rules",
+              "Conditional Probability",
+              "Bayes Theorem",
+              "Random Variables",
+              "Probability Distributions",
+              "Expectation",
+              "Variance",
+              "Mean",
+              "Median",
+              "Mode",
+              "Standard Deviation",
+              "Correlation",
+              "Covariance",
+              "Hypothesis Testing",
+              "Confidence Intervals",
+              "Convex Functions",
+              "Cost Functions",
+              "Learning Rate",
+              "SGD",
+              "Momentum",
+              "Adam Optimizer",
+              "NumPy Arrays",
+              "Broadcasting",
+              "Vectorization",
+              "Linear Algebra with NumPy"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Calculus",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Probability",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Statistics",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Optimization",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Numerical Computing",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "Matrix Library",
+      "Image Filters",
+      "Linear Regression from Scratch",
+      "Study 8–10 hours",
+      "Solve 40 math problems",
+      "Implement one algorithm from scratch",
+      "Push 5 GitHub commits",
+      "[ ] Matrix Calculator",
+      "[ ] Gradient Descent",
+      "[ ] Naive Bayes Demo",
+      "[ ] Linear Regression from Scratch",
+      "Before Phase IV, you should be able to understand the mathematics behind linear regression, gradient descent, embeddings, and basic neural networks without relying on intuition alone."
+    ],
+    "checklist": [
+      "Vectors",
+      "Matrices",
+      "Eigenvalues",
+      "SVD",
+      "Derivatives",
+      "Chain Rule",
+      "Gradient Descent",
+      "Bayes Theorem",
+      "Random Variables",
+      "Distributions",
+      "Mean",
+      "Standard Deviation",
+      "Correlation",
+      "Hypothesis Testing",
+      "SGD",
+      "Momentum",
+      "Adam"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_IV_Machine_Learning",
+    "title": "Phase IV: Machine Learning",
+    "goal": "Learn the core algorithms that allow computers to learn from data before moving into deep learning.",
+    "duration": "10–14 Weeks",
+    "difficulty": "⭐⭐⭐☆☆",
+    "modules": [
+      {
+        "title": "Module 1 — Machine Learning Foundations",
+        "topics": [
+          {
+            "title": "Module 1 — Machine Learning Foundations Topics",
+            "learn": [
+              "What is Machine Learning?",
+              "Types of Learning",
+              "Supervised",
+              "Unsupervised",
+              "Reinforcement (overview)",
+              "Features & Labels",
+              "Training / Validation / Test Split",
+              "Bias vs Variance",
+              "Underfitting",
+              "Overfitting",
+              "Cleaning Data",
+              "Missing Values",
+              "Encoding Categorical Variables",
+              "Feature Scaling",
+              "Standardization",
+              "Normalization",
+              "Feature Engineering",
+              "Train/Test Split",
+              "Cross Validation",
+              "Linear Regression",
+              "Multiple Linear Regression",
+              "Polynomial Regression",
+              "Regularization",
+              "Ridge",
+              "Lasso",
+              "Linear Regression from scratch using NumPy",
+              "Linear Regression using scikit-learn",
+              "Logistic Regression",
+              "K-Nearest Neighbors",
+              "Naive Bayes",
+              "Decision Trees",
+              "Random Forest",
+              "Support Vector Machine",
+              "Accuracy",
+              "Precision",
+              "Recall",
+              "F1 Score",
+              "ROC-AUC",
+              "Confusion Matrix",
+              "K-Means",
+              "Hierarchical Clustering",
+              "DBSCAN (Intro)",
+              "PCA",
+              "t-SNE (Overview)",
+              "Cross Validation",
+              "Hyperparameter Tuning",
+              "Grid Search",
+              "Random Search",
+              "Learning Curves",
+              "Feature Importance",
+              "Bagging",
+              "Boosting",
+              "AdaBoost",
+              "Gradient Boosting",
+              "XGBoost (Introduction)",
+              "NumPy",
+              "pandas",
+              "matplotlib",
+              "scikit-learn",
+              "House Price Predictor",
+              "Student Performance Predictor",
+              "Credit Risk Prediction",
+              "Loan Approval Predictor",
+              "Movie Recommendation (basic)",
+              "Data Collection",
+              "Cleaning",
+              "Training",
+              "Evaluation",
+              "Model Saving",
+              "Prediction API",
+              "Study 10 hours",
+              "Solve 20 ML exercises",
+              "Complete 1 notebook",
+              "Read 1 ML article",
+              "Push 5 GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Data Preparation",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Regression",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Classification",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Clustering",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Dimensionality Reduction",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — Model Evaluation",
+        "topics": []
+      },
+      {
+        "title": "Module 8 — Ensemble Learning",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "Spam Detection",
+      "Heart Disease Prediction",
+      "Customer Churn Prediction",
+      "[ ] House Price Predictor",
+      "[ ] Spam Classifier",
+      "[ ] Customer Segmentation",
+      "[ ] Titanic Prediction",
+      "[ ] End-to-End ML Pipeline",
+      "You should be able to independently build, evaluate, and improve classical machine learning models and explain why one algorithm is preferable over another for a given dataset before starting Deep Learning."
+    ],
+    "checklist": [
+      "ML Basics",
+      "Bias & Variance",
+      "Data Preparation",
+      "Linear Regression",
+      "Logistic Regression",
+      "KNN",
+      "Naive Bayes",
+      "Decision Tree",
+      "Random Forest",
+      "SVM",
+      "K-Means",
+      "PCA",
+      "Precision",
+      "Recall",
+      "F1",
+      "ROC-AUC",
+      "Cross Validation"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_V_Deep_Learning",
+    "title": "Phase V: Deep Learning",
+    "goal": "Understand, build, train, debug, and optimize neural networks using PyTorch, progressing from perceptrons to modern deep architectures.",
+    "duration": "12–16 Weeks",
+    "difficulty": "⭐⭐⭐⭐☆",
+    "modules": [
+      {
+        "title": "Module 1 — Neural Network Fundamentals",
+        "topics": [
+          {
+            "title": "Module 1 — Neural Network Fundamentals Topics",
+            "learn": [
+              "Biological vs Artificial Neurons",
+              "Perceptron",
+              "Multi-Layer Perceptron (MLP)",
+              "Forward Propagation",
+              "Activation Functions",
+              "Sigmoid",
+              "Tanh",
+              "ReLU",
+              "Leaky ReLU",
+              "GELU (overview)",
+              "Loss Functions",
+              "Backpropagation",
+              "Gradient Descent",
+              "Tensors",
+              "Autograd",
+              "Datasets & DataLoaders",
+              "nn.Module",
+              "Optimizers",
+              "GPU Training",
+              "Saving & Loading Models",
+              "MNIST Digit Classification",
+              "Fashion-MNIST Classification",
+              "Batch Training",
+              "Epochs",
+              "Mini-batches",
+              "Learning Rate Scheduling",
+              "Weight Initialization",
+              "Regularization",
+              "Dropout",
+              "Batch Normalization",
+              "Early Stopping",
+              "Convolution",
+              "Padding",
+              "Stride",
+              "Pooling",
+              "Feature Maps",
+              "CNN Architectures",
+              "LeNet",
+              "AlexNet",
+              "VGG",
+              "ResNet (intro)",
+              "RNN",
+              "LSTM",
+              "GRU",
+              "Sequence Prediction",
+              "Time Series Basics",
+              "SGD",
+              "Momentum",
+              "RMSProp",
+              "Adam",
+              "Learning Rate Schedulers",
+              "Accuracy",
+              "Precision",
+              "Recall",
+              "F1 Score",
+              "ROC-AUC",
+              "Confusion Matrix",
+              "TensorBoard",
+              "Experiment Tracking",
+              "PyTorch",
+              "torchvision",
+              "NumPy",
+              "pandas",
+              "matplotlib",
+              "MNIST Classifier",
+              "Fashion-MNIST Classifier",
+              "CIFAR-10 Classifier",
+              "Cats vs Dogs CNN",
+              "Config files",
+              "Checkpoints",
+              "Metrics",
+              "GPU support",
+              "Resume training",
+              "Train 2 models",
+              "Read 1 paper",
+              "Implement 1 concept from scratch",
+              "Push 5 GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — PyTorch Essentials",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Training Deep Networks",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Convolutional Neural Networks",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Sequence Models",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Optimization",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — Model Evaluation",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "Cats vs Dogs Classifier",
+      "CIFAR-10 Image Classifier",
+      "[ ] MNIST",
+      "[ ] CIFAR-10",
+      "[ ] CNN Classifier",
+      "[ ] Training Framework",
+      "Before moving to Computer Vision, you should be able to build, train, debug, and evaluate deep neural networks in PyTorch without following a tutorial."
+    ],
+    "checklist": [
+      "Perceptron",
+      "Backpropagation",
+      "Activation Functions",
+      "Loss Functions",
+      "Tensors",
+      "Autograd",
+      "DataLoader",
+      "GPU Training",
+      "MLP",
+      "CNN",
+      "RNN",
+      "LSTM",
+      "GRU",
+      "SGD",
+      "Adam",
+      "BatchNorm",
+      "Dropout"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_VI_Computer_Vision",
+    "title": "Phase VI: Computer Vision",
+    "goal": "Master computer vision from image fundamentals to modern vision models capable of solving real-world problems.",
+    "duration": "12–16 Weeks",
+    "difficulty": "⭐⭐⭐⭐☆",
+    "modules": [
+      {
+        "title": "Module 1 — Image Fundamentals",
+        "topics": [
+          {
+            "title": "Module 1 — Image Fundamentals Topics",
+            "learn": [
+              "Pixels",
+              "RGB & Grayscale",
+              "Image Formats",
+              "Histograms",
+              "Resizing",
+              "Normalization",
+              "Data Augmentation",
+              "Reading/Writing Images",
+              "Drawing",
+              "Thresholding",
+              "Filtering",
+              "Edge Detection",
+              "Contours",
+              "Morphological Operations",
+              "Detect edges",
+              "Count objects",
+              "Build a document scanner",
+              "LeNet",
+              "AlexNet",
+              "VGG",
+              "Inception",
+              "ResNet",
+              "DenseNet",
+              "EfficientNet",
+              "Vision Transformer (Overview)",
+              "Feature Extraction",
+              "Fine-Tuning",
+              "Pretrained Models",
+              "torchvision Models",
+              "Bounding Boxes",
+              "IoU",
+              "NMS",
+              "SSD",
+              "Faster R-CNN",
+              "YOLO (Concepts & Usage)",
+              "Semantic Segmentation",
+              "Instance Segmentation",
+              "U-Net",
+              "Mask R-CNN (Overview)",
+              "Optical Character Recognition",
+              "Face Detection",
+              "Face Recognition (Ethics Included)",
+              "EasyOCR",
+              "Tesseract",
+              "OpenCV",
+              "IoU",
+              "mAP",
+              "Dice Score",
+              "Precision",
+              "Recall",
+              "OpenCV",
+              "torchvision",
+              "Pillow",
+              "Albumentations",
+              "PyTorch",
+              "ImageNet Classification with Deep CNNs (AlexNet)",
+              "Deep Residual Learning (ResNet)",
+              "U-Net",
+              "YOLO (latest overview)",
+              "Vision Transformer",
+              "Image Classifier",
+              "OCR Tool",
+              "Plant Disease Detector",
+              "Vehicle Detector",
+              "Dataset pipeline",
+              "Training",
+              "Validation",
+              "Inference",
+              "Model export",
+              "Train one CV model",
+              "Read one paper",
+              "Complete one OpenCV exercise",
+              "Push five GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — OpenCV",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — CNN Architectures",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Transfer Learning",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Object Detection",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Image Segmentation",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — OCR & Face Vision",
+        "topics": []
+      },
+      {
+        "title": "Module 8 — Evaluation",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "Plant Disease Detection",
+      "Waste Classification",
+      "[ ] OCR Tool",
+      "[ ] Detector",
+      "[ ] Segmentation Model",
+      "[ ] End-to-End Vision App",
+      "You should confidently build, train, evaluate, and deploy modern computer vision models before beginning Natural Language Processing and Transformers."
+    ],
+    "checklist": [
+      "Image Processing",
+      "OpenCV",
+      "Data Augmentation",
+      "CNNs",
+      "Transfer Learning",
+      "Object Detection",
+      "Segmentation",
+      "OCR"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_VII_Natural_Language_Processing",
+    "title": "Phase VII: Natural Language Processing (NLP)",
+    "goal": "Learn how machines understand, process, and generate human language, building the foundation for Transformers and Large Language Models.",
+    "duration": "10–14 Weeks",
+    "difficulty": "⭐⭐⭐⭐☆",
+    "modules": [
+      {
+        "title": "Module 1 — NLP Fundamentals",
+        "topics": [
+          {
+            "title": "Module 1 — NLP Fundamentals Topics",
+            "learn": [
+              "What is NLP?",
+              "NLP Pipeline",
+              "Text Cleaning",
+              "Tokenization",
+              "Normalization",
+              "Stop Words",
+              "Stemming",
+              "Lemmatization",
+              "Regular Expressions",
+              "One-Hot Encoding",
+              "Bag of Words",
+              "TF-IDF",
+              "Word2Vec",
+              "GloVe",
+              "FastText",
+              "Embeddings",
+              "RNN",
+              "LSTM",
+              "GRU",
+              "Sequence-to-Sequence Models",
+              "Attention (Introduction)",
+              "Text Classification",
+              "Sentiment Analysis",
+              "Named Entity Recognition (NER)",
+              "Part-of-Speech Tagging",
+              "Text Summarization",
+              "Machine Translation (Overview)",
+              "Question Answering (Overview)",
+              "transformers Library",
+              "datasets Library",
+              "tokenizers",
+              "pipelines",
+              "Model Hub"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Text Representation",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Sequence Models",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — NLP Tasks",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Hugging Face Ecosystem",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "Spam Classifier",
+      "News Category Classifier",
+      "Movie Review Sentiment Analyzer",
+      "[ ] Spam Classifier",
+      "[ ] Sentiment Analysis",
+      "[ ] NLP Pipeline",
+      "You should be comfortable preprocessing text, training NLP models, using pretrained language models, and preparing for the Transformer architecture in the next phase."
+    ],
+    "checklist": [
+      "Tokenization",
+      "TF-IDF",
+      "Word Embeddings",
+      "RNN",
+      "LSTM",
+      "GRU",
+      "BERT Basics",
+      "NLTK",
+      "spaCy",
+      "Hugging Face"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_VIII_Transformers",
+    "title": "Phase VIII: Transformers",
+    "goal": "Master the Transformer architecture that powers modern language models, vision models, and multimodal AI systems.",
+    "duration": "12–16 Weeks",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "modules": [
+      {
+        "title": "Module 1 — Why Transformers?",
+        "topics": [
+          {
+            "title": "Module 1 — Why Transformers? Topics",
+            "learn": [
+              "Limitations of RNNs and LSTMs",
+              "Parallel Processing",
+              "Long-Range Dependencies",
+              "Sequence Modeling",
+              "Query, Key, Value",
+              "Scaled Dot-Product Attention",
+              "Self-Attention",
+              "Cross-Attention",
+              "Multi-Head Attention",
+              "Positional Encoding",
+              "Encoder",
+              "Decoder",
+              "Feed Forward Network",
+              "Residual Connections",
+              "Layer Normalization",
+              "Tokenizers",
+              "Vocabulary",
+              "Masking",
+              "Teacher Forcing",
+              "Training Loops",
+              "Mixed Precision",
+              "Checkpointing",
+              "Transfer Learning",
+              "Full Fine-Tuning",
+              "Parameter-Efficient Fine-Tuning (PEFT)",
+              "LoRA (Introduction)",
+              "PyTorch",
+              "transformers",
+              "tokenizers",
+              "datasets",
+              "accelerate",
+              "Sentiment Analysis with BERT",
+              "Machine Translation",
+              "Text Summarization",
+              "Multi-head attention",
+              "Positional encoding",
+              "Encoder stack",
+              "Decoder stack",
+              "Training pipeline",
+              "Read one Transformer paper",
+              "Implement one module from scratch",
+              "Train one experiment",
+              "Push five GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Attention Mechanism",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Transformer Architecture",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Training Transformers",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Famous Transformer Models",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Fine-Tuning",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] BERT Fine-Tuning",
+      "[ ] Mini Transformer",
+      "[ ] Transformer from Scratch",
+      "Before beginning LLM Engineering, you should understand every major component of the Transformer architecture and be able to implement a simplified version in PyTorch."
+    ],
+    "checklist": [
+      "Self-Attention",
+      "Multi-Head Attention",
+      "Positional Encoding",
+      "Encoder",
+      "Decoder",
+      "BERT",
+      "GPT",
+      "T5",
+      "ViT"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_IX_LLM_Engineering",
+    "title": "Phase IX: LLM Engineering",
+    "goal": "Learn how modern Large Language Models are built, adapted, evaluated, and deployed into production AI systems.",
+    "duration": "14–18 Weeks",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "modules": [
+      {
+        "title": "Module 1 — LLM Fundamentals",
+        "topics": [
+          {
+            "title": "Module 1 — LLM Fundamentals Topics",
+            "learn": [
+              "What is an LLM?",
+              "Pretraining vs Fine-tuning",
+              "Decoder-only vs Encoder-Decoder",
+              "Scaling Laws",
+              "Context Window",
+              "Tokens & Tokenization",
+              "Dataset Collection",
+              "Data Cleaning",
+              "Tokenizers",
+              "Training Objectives",
+              "Checkpointing",
+              "Mixed Precision",
+              "Distributed Training (Overview)",
+              "Full Fine-Tuning",
+              "LoRA",
+              "QLoRA",
+              "PEFT",
+              "Instruction Tuning",
+              "Preference Tuning (Overview)",
+              "Embeddings",
+              "Chunking",
+              "Vector Databases",
+              "Similarity Search",
+              "Retrieval Pipelines",
+              "Hybrid Search",
+              "LangChain",
+              "LlamaIndex",
+              "FAISS",
+              "Chroma",
+              "Function Calling",
+              "Tool Use",
+              "Planning",
+              "Memory",
+              "Multi-step Reasoning",
+              "Agent Workflows",
+              "Hallucination",
+              "Ground Truth Evaluation",
+              "BLEU",
+              "ROUGE",
+              "Human Evaluation",
+              "LLM-as-a-Judge (Overview)",
+              "vLLM",
+              "Ollama",
+              "TensorRT-LLM (Overview)",
+              "Quantization",
+              "GGUF",
+              "ONNX (Overview)",
+              "FastAPI",
+              "Docker",
+              "transformers",
+              "peft",
+              "accelerate",
+              "bitsandbytes",
+              "sentence-transformers",
+              "FAISS",
+              "ChromaDB",
+              "LangChain",
+              "LlamaIndex",
+              "FastAPI",
+              "GPT Text Generator",
+              "Chatbot with Memory",
+              "PDF Chat Assistant",
+              "RAG",
+              "Tool Calling",
+              "Authentication",
+              "Conversation Memory",
+              "Evaluation Dashboard",
+              "API Deployment",
+              "Read one LLM paper",
+              "Train or fine-tune one model",
+              "Build one AI application",
+              "Push five GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Training Pipeline",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Fine-Tuning",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Retrieval-Augmented Generation (RAG)",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Tool Calling & AI Agents",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Evaluation",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — Deployment",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] GPT Clone",
+      "[ ] PDF Chat",
+      "[ ] AI Agent",
+      "[ ] Production LLM API",
+      "You should be able to build, fine-tune, evaluate, and deploy production-grade LLM applications using modern open-source tooling before moving to AI Systems & MLOps."
+    ],
+    "checklist": [
+      "Tokenization",
+      "Scaling Laws",
+      "Pretraining",
+      "Fine-Tuning",
+      "LoRA",
+      "QLoRA",
+      "RAG",
+      "Vector Databases",
+      "Tool Calling",
+      "Deployment"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_X_AI_Systems_and_MLOps",
+    "title": "Phase X: AI Systems & MLOps",
+    "goal": "Learn how to build, deploy, monitor, scale, and maintain production-grade AI systems used by startups and research organizations.",
+    "duration": "12–16 Weeks",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "modules": [
+      {
+        "title": "Module 1 — AI System Design",
+        "topics": [
+          {
+            "title": "Module 1 — AI System Design Topics",
+            "learn": [
+              "End-to-End AI Pipelines",
+              "Offline vs Online Inference",
+              "Batch vs Real-Time Inference",
+              "Microservices",
+              "REST APIs",
+              "Event-Driven Architecture",
+              "Data Collection",
+              "Data Validation",
+              "ETL Pipelines",
+              "Data Versioning",
+              "Feature Stores",
+              "Data Drift",
+              "pandas",
+              "Apache Arrow",
+              "DVC",
+              "Feast (Introduction)",
+              "Experiment Tracking",
+              "Checkpoint Management",
+              "Hyperparameter Optimization",
+              "Distributed Training (Overview)",
+              "GPU Scheduling",
+              "MLflow",
+              "Weights & Biases",
+              "Ray Tune (Overview)",
+              "FastAPI",
+              "Docker",
+              "Kubernetes (Overview)",
+              "Model Serving",
+              "Load Balancing",
+              "API Versioning",
+              "FastAPI",
+              "Docker",
+              "Kubernetes",
+              "Nginx",
+              "Logging",
+              "Metrics",
+              "Monitoring",
+              "Alerting",
+              "Model Drift",
+              "Data Drift",
+              "Retraining Pipelines",
+              "Prometheus",
+              "Grafana",
+              "Evidently AI",
+              "GitHub Actions",
+              "Automated Testing",
+              "Model Validation",
+              "Continuous Deployment",
+              "Rollbacks",
+              "Authentication",
+              "API Keys",
+              "Secrets Management",
+              "Bias & Fairness",
+              "Privacy",
+              "Explainability",
+              "Responsible AI Principles",
+              "FastAPI",
+              "Docker",
+              "Kubernetes",
+              "MLflow",
+              "Weights & Biases",
+              "DVC",
+              "GitHub Actions",
+              "Prometheus",
+              "Grafana",
+              "Redis",
+              "PostgreSQL",
+              "Designing Machine Learning Systems",
+              "Building Machine Learning Powered Applications",
+              "Hidden Technical Debt in Machine Learning Systems",
+              "The ML Test Score",
+              "Model Inference API",
+              "ML Pipeline with MLflow",
+              "Dockerized AI Service",
+              "Model Training",
+              "Experiment Tracking",
+              "Model Registry",
+              "Deployment",
+              "Monitoring",
+              "CI/CD",
+              "Automated Retraining",
+              "Deploy one AI service",
+              "Read one engineering article",
+              "Improve one production pipeline",
+              "Push five GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Data Engineering for AI",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Model Training Infrastructure",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Model Deployment",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Monitoring & Reliability",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — CI/CD for AI",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — Security & Responsible AI",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] AI Inference API",
+      "[ ] ML Pipeline",
+      "[ ] Production AI Platform",
+      "You should be capable of designing, deploying, monitoring, and maintaining scalable AI systems suitable for startups, enterprise applications, and research environments."
+    ],
+    "checklist": [
+      "AI System Design",
+      "APIs",
+      "Microservices",
+      "MLflow",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Monitoring",
+      "Drift Detection"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_XI_Reinforcement_Learning",
+    "title": "Phase XI: Reinforcement Learning",
+    "goal": "Learn how intelligent agents make sequential decisions by interacting with environments, forming the foundation for robotics, game AI, autonomous systems, and advanced AI research.",
+    "duration": "12–16 Weeks",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "modules": [
+      {
+        "title": "Module 1 — RL Foundations",
+        "topics": [
+          {
+            "title": "Module 1 — RL Foundations Topics",
+            "learn": [
+              "What is Reinforcement Learning?",
+              "Agent",
+              "Environment",
+              "State",
+              "Action",
+              "Reward",
+              "Episode",
+              "Policy",
+              "Value Function",
+              "Markov Decision Process (MDP)",
+              "Bellman Equation",
+              "Policy Evaluation",
+              "Policy Iteration",
+              "Value Iteration",
+              "Monte Carlo Methods",
+              "Temporal Difference Learning",
+              "SARSA",
+              "Q-Learning",
+              "Expected SARSA",
+              "Deep Q-Network (DQN)",
+              "Experience Replay",
+              "Target Networks",
+              "Double DQN",
+              "Dueling DQN",
+              "Gymnasium",
+              "Stable-Baselines3",
+              "PyTorch",
+              "REINFORCE",
+              "Actor-Critic",
+              "A2C",
+              "PPO",
+              "DDPG (Overview)",
+              "SAC (Overview)",
+              "Multi-Agent Reinforcement Learning",
+              "Offline RL",
+              "Imitation Learning",
+              "Inverse RL (Overview)",
+              "Reward Curves",
+              "Sample Efficiency",
+              "Exploration vs Exploitation",
+              "Benchmark Environments",
+              "Gymnasium",
+              "Stable-Baselines3",
+              "PyTorch",
+              "NumPy",
+              "MuJoCo (optional)",
+              "GridWorld Solver",
+              "CartPole Agent",
+              "LunarLander Agent",
+              "Read one RL paper",
+              "Train one agent",
+              "Analyze reward curves",
+              "Push five GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Dynamic Programming",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Model-Free RL",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Deep Reinforcement Learning",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Policy Gradient Methods",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Multi-Agent & Offline RL",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] GridWorld",
+      "[ ] CartPole",
+      "[ ] Atari Agent",
+      "[ ] RL Training Framework",
+      "You should understand and implement classical and deep reinforcement learning algorithms, evaluate agents, and adapt RL methods to new environments before moving into AI Research."
+    ],
+    "checklist": [
+      "MDP",
+      "Bellman Equation",
+      "Value Functions",
+      "Q-Learning",
+      "SARSA",
+      "DQN",
+      "PPO",
+      "Actor-Critic"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_XII_AI_Research",
+    "title": "Phase XII: AI Research",
+    "goal": "Transition from implementing existing AI methods to conducting original, reproducible AI research.",
+    "duration": "16–20 Weeks",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "modules": [
+      {
+        "title": "Module 1 — Research Foundations",
+        "topics": [
+          {
+            "title": "Module 1 — Research Foundations Topics",
+            "learn": [
+              "What is scientific research?",
+              "Research lifecycle",
+              "Hypothesis formulation",
+              "Research questions",
+              "Literature review",
+              "Research ethics",
+              "Reproducibility",
+              "Paper structure",
+              "Abstract analysis",
+              "Method section",
+              "Experiments",
+              "Ablation studies",
+              "Limitations",
+              "Future work",
+              "Problem",
+              "Method",
+              "Results",
+              "Weaknesses",
+              "Ideas for improvement",
+              "Dataset selection",
+              "Baselines",
+              "Metrics",
+              "Hyperparameter search",
+              "Statistical significance",
+              "Error analysis",
+              "Reproducibility checklists",
+              "Weights & Biases",
+              "MLflow",
+              "TensorBoard",
+              "LaTeX",
+              "Citations (BibTeX)",
+              "Figures & Tables",
+              "Writing methodology",
+              "Writing results",
+              "Writing discussions",
+              "Overleaf",
+              "Zotero",
+              "Mendeley",
+              "Reading GitHub repositories",
+              "Reproducing code",
+              "Benchmarking",
+              "Contributing to open source",
+              "Writing technical documentation"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Reading Research Papers",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Experiment Design",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Scientific Writing",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — Reproducing Landmark Papers",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Open Source Research",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — Research Portfolio",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] Paper Summaries",
+      "[ ] Reproduction Study",
+      "[ ] Original Research Paper",
+      "You should be capable of independently reading current AI literature, reproducing published work, designing rigorous experiments, and writing research papers suitable for submission or public release."
+    ],
+    "checklist": [
+      "Literature Review",
+      "Experiment Design",
+      "Statistical Analysis",
+      "Scientific Writing",
+      "Paper Reproduction",
+      "Open Source Contribution"
+    ]
+  },
+  {
+    "id": "FounderOS_Curriculum_Phase_XIII_AI_for_Physics",
+    "title": "Phase XIII: AI for Physics",
+    "goal": "Apply modern Artificial Intelligence to solve scientific and physics problems, preparing for research at the intersection of AI and Physics.",
+    "duration": "20–24 Weeks",
+    "difficulty": "⭐⭐⭐⭐⭐",
+    "modules": [
+      {
+        "title": "Module 1 — Scientific Computing",
+        "topics": [
+          {
+            "title": "Module 1 — Scientific Computing Topics",
+            "learn": [
+              "Scientific Python",
+              "NumPy (Advanced)",
+              "SciPy",
+              "JAX (Introduction)",
+              "Parallel Computing",
+              "Numerical Stability",
+              "Floating Point Precision",
+              "NumPy",
+              "SciPy",
+              "JAX",
+              "CuPy",
+              "Numerical Differentiation",
+              "Numerical Integration",
+              "Root Finding",
+              "Linear System Solvers",
+              "Optimization",
+              "Ordinary Differential Equations (ODEs)",
+              "Partial Differential Equations (PDEs)",
+              "Scientific Machine Learning",
+              "Physics-Informed Neural Networks (PINNs)",
+              "Neural Operators",
+              "Fourier Neural Operators",
+              "Differentiable Physics",
+              "Classical Mechanics Simulation",
+              "Electromagnetism Simulation",
+              "Fluid Dynamics (Overview)",
+              "Heat Equation",
+              "Wave Equation",
+              "N-Body Simulation",
+              "Symbolic Regression",
+              "Bayesian Optimization",
+              "Surrogate Models",
+              "Scientific Foundation Models",
+              "Automated Hypothesis Generation (Overview)",
+              "Reproducible Experiments",
+              "HPC Basics",
+              "CUDA Fundamentals (Overview)",
+              "Scientific Visualization",
+              "Data Pipelines",
+              "PyTorch",
+              "JAX",
+              "Matplotlib",
+              "ParaView (Overview)",
+              "Planetary Motion Simulator",
+              "Heat Equation Solver",
+              "PINN for PDE Solving",
+              "Galaxy Image Classifier",
+              "Numerical simulation",
+              "Scientific datasets",
+              "Deep learning",
+              "Experiment tracking",
+              "Reproducible evaluation",
+              "Read one AI-for-science paper",
+              "Implement one numerical method",
+              "Build one scientific notebook",
+              "Maintain research journal",
+              "Push five GitHub commits"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Module 2 — Numerical Methods",
+        "topics": []
+      },
+      {
+        "title": "Module 3 — Scientific Machine Learning (SciML)",
+        "topics": []
+      },
+      {
+        "title": "Module 4 — Computational Physics",
+        "topics": []
+      },
+      {
+        "title": "Module 5 — AI for Scientific Discovery",
+        "topics": []
+      },
+      {
+        "title": "Module 6 — Domain Applications",
+        "topics": []
+      },
+      {
+        "title": "Module 7 — Research Software",
+        "topics": []
+      }
+    ],
+    "projects": [
+      "[ ] Gravity Simulator",
+      "[ ] Heat Equation Solver",
+      "[ ] PINN Project",
+      "[ ] Research-Grade AI for Physics Project",
+      "Build an original AI-for-Physics research project:",
+      "Identify a scientific problem.",
+      "Survey existing literature.",
+      "Build a baseline.",
+      "Propose an improvement.",
+      "Run reproducible experiments.",
+      "Publish the code, report, and results.",
+      "Congratulations. Completing this curriculum means you have progressed from programming fundamentals to AI engineering, research methodology, and the application of AI to frontier problems in physics. Continue refining your research portfolio by reading new papers, contributing to open-source scientific software, and pursuing original research."
+    ],
+    "checklist": [
+      "NumPy",
+      "SciPy",
+      "JAX",
+      "ODEs",
+      "PDEs",
+      "Computational Physics",
+      "Scientific Visualization",
+      "PINNs",
+      "Neural Operators",
+      "Symbolic Regression",
+      "Scientific ML"
+    ]
+  }
+]
