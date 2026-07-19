@@ -40,7 +40,7 @@ export default function Library() {
             placeholder="Search resources..." 
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="pl-9 bg-charcoal-900/50 border-white/10 rounded-xl"
+            className="pl-9 bg-muted/50 border-border rounded-xl"
           />
         </div>
       </div>
@@ -54,8 +54,8 @@ export default function Library() {
             onClick={() => setActiveFilter(filter)}
             className={`rounded-full transition-colors ${
               activeFilter === filter 
-                ? 'bg-white/20 border-white/30 text-white' 
-                : 'bg-white/5 border-white/10 hover:bg-white/10'
+                ? 'bg-accent border-border text-accent-foreground' 
+                : 'bg-muted/30 border-transparent text-muted-foreground hover:bg-muted'
             }`}
           >
             {filter}
@@ -68,7 +68,7 @@ export default function Library() {
           <p className="text-muted-foreground animate-pulse">Loading library...</p>
         </div>
       ) : filteredResources.length === 0 ? (
-        <div className="text-center py-20 border border-dashed border-white/10 rounded-xl bg-white/5">
+        <div className="text-center py-20 border border-dashed border-border rounded-xl bg-muted/20">
           <BookOpen className="w-8 h-8 text-muted-foreground/50 mx-auto mb-3" />
           <p className="text-muted-foreground">No resources found.</p>
         </div>

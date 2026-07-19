@@ -58,18 +58,18 @@ export default function Learning() {
                     )}
                   </div>
 
-                  <div className="w-full h-px bg-white/10 my-4" />
+                  <div className="w-full h-px bg-border my-4" />
 
                   {/* Modules & Topics */}
                   {phase.modules?.length > 0 && (
                     <div className="space-y-6">
                       {phase.modules.map((mod: any, mIdx: number) => (
                         <div key={mIdx}>
-                          <h4 className="text-sm font-medium uppercase tracking-widest text-white/70 mb-3 flex items-center gap-2">
+                          <h4 className="text-sm font-medium uppercase tracking-widest text-foreground/70 mb-3 flex items-center gap-2">
                             <Target className="w-3.5 h-3.5" />
                             {mod.title}
                           </h4>
-                          <div className="space-y-2 pl-5 border-l border-white/10">
+                          <div className="space-y-2 pl-5 border-l border-border">
                             {mod.topics?.map((topic: any, tIdx: number) => {
                               const topicId = `${phase.id}_${mIdx}_${tIdx}`;
                               const isCompleted = progress.completedTopics.includes(topicId);
@@ -78,25 +78,24 @@ export default function Learning() {
                                 <div key={tIdx} className="group/topic">
                                   <button 
                                     onClick={() => toggleTopic(topicId)}
-                                    className="flex items-start gap-3 w-full text-left hover:bg-white/5 p-2 rounded-lg transition-colors"
+                                    className="flex items-start gap-3 w-full text-left hover:bg-muted/50 p-2 rounded-lg transition-colors"
                                   >
                                     <div className="mt-0.5 shrink-0">
                                       {isCompleted ? (
-                                        <CheckCircle2 className="w-4 h-4 text-calmGreen" />
+                                        <CheckCircle2 className="w-4 h-4 text-green-500" />
                                       ) : (
-                                        <Circle className="w-4 h-4 text-muted-foreground group-hover/topic:text-white transition-colors" />
+                                        <Circle className="w-4 h-4 text-muted-foreground group-hover/topic:text-foreground transition-colors" />
                                       )}
                                     </div>
                                     <div className="flex-1">
-                                      <span className={`text-sm ${isCompleted ? 'text-muted-foreground line-through opacity-50' : 'text-white'}`}>
+                                      <span className={`text-sm ${isCompleted ? 'text-muted-foreground line-through opacity-50' : 'text-foreground'}`}>
                                         {topic.title}
                                       </span>
-                                      {/* Sub-items (learn points) */}
                                       {!isCompleted && topic.learn?.length > 0 && (
                                         <ul className="mt-2 space-y-1">
                                           {topic.learn.map((l: string, i: number) => (
                                             <li key={i} className="text-xs text-muted-foreground flex items-center gap-2">
-                                              <div className="w-1 h-1 rounded-full bg-white/20" />
+                                              <div className="w-1 h-1 rounded-full bg-border" />
                                               {l}
                                             </li>
                                           ))}
@@ -116,10 +115,10 @@ export default function Learning() {
                   {/* Projects */}
                   {phase.projects?.length > 0 && (
                     <>
-                      <div className="w-full h-px bg-white/10 my-4" />
+                      <div className="w-full h-px bg-border my-4" />
                       <div>
-                        <h4 className="text-sm font-medium uppercase tracking-widest text-white/70 mb-3 flex items-center gap-2">
-                          <Code2 className="w-3.5 h-3.5" />
+                        <h4 className="text-sm font-medium uppercase tracking-widest text-foreground/70 mb-3 flex items-center gap-2">
+                          <Trophy className="w-3.5 h-3.5" />
                           Mini Projects
                         </h4>
                         <div className="space-y-2">
@@ -130,14 +129,14 @@ export default function Learning() {
                               <button 
                                 key={pIdx}
                                 onClick={() => toggleProject(projectId)}
-                                className="flex items-center gap-3 w-full text-left bg-white/5 hover:bg-white/10 p-3 rounded-lg transition-colors border border-white/5"
+                                className="flex items-center gap-3 w-full text-left bg-muted/30 hover:bg-muted p-3 rounded-lg transition-colors border border-border"
                               >
                                 {isCompleted ? (
-                                  <CheckCircle2 className="w-5 h-5 text-calmGreen shrink-0" />
+                                  <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0" />
                                 ) : (
                                   <Circle className="w-5 h-5 text-muted-foreground shrink-0" />
                                 )}
-                                <span className={`text-sm font-medium ${isCompleted ? 'text-muted-foreground line-through opacity-50' : 'text-white'}`}>
+                                <span className={`text-sm font-medium ${isCompleted ? 'text-muted-foreground line-through opacity-50' : 'text-foreground'}`}>
                                   {project}
                                 </span>
                               </button>

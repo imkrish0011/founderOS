@@ -54,7 +54,7 @@ export default function Focus() {
             placeholder="What is your singular focus right now?"
             className="text-center bg-transparent border-none text-xl md:text-2xl font-light placeholder:text-muted-foreground/50 focus-visible:ring-0 shadow-none h-14"
           />
-          <div className="w-16 h-px bg-white/10 mx-auto" />
+          <div className="w-16 h-px bg-border mx-auto" />
         </div>
 
         <div className="text-8xl md:text-[140px] font-light tracking-tighter text-foreground tabular-nums select-none">
@@ -66,7 +66,7 @@ export default function Focus() {
             onClick={toggleTimer}
             variant="outline" 
             size="icon" 
-            className="w-16 h-16 rounded-full bg-white/5 border-white/10 hover:bg-white/10 hover:border-white/20"
+            className="w-16 h-16 rounded-full bg-muted/20 border-border hover:bg-muted/40 hover:border-muted"
           >
             {isRunning ? <Square className="w-6 h-6" /> : <Play className="w-6 h-6 ml-1" />}
           </Button>
@@ -74,7 +74,7 @@ export default function Focus() {
             onClick={resetTimer}
             variant="ghost" 
             size="icon" 
-            className="w-16 h-16 rounded-full text-muted-foreground hover:text-white"
+            className="w-16 h-16 rounded-full text-muted-foreground hover:text-foreground"
           >
             <RefreshCcw className="w-6 h-6" />
           </Button>

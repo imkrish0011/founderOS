@@ -44,7 +44,7 @@ export default function Journal() {
             <textarea 
               value={localEntry.accomplished}
               onChange={(e) => handleChange('accomplished', e.target.value)}
-              className="w-full bg-charcoal-900/50 border border-white/10 rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-white/20 transition-all text-sm"
+              className="w-full bg-muted/50 border border-border rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-ring transition-all text-sm text-foreground placeholder:text-muted-foreground"
               placeholder="Built the new canvas feature..."
             />
           </div>
@@ -56,7 +56,7 @@ export default function Journal() {
             <textarea 
               value={localEntry.learned}
               onChange={(e) => handleChange('learned', e.target.value)}
-              className="w-full bg-charcoal-900/50 border border-white/10 rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-white/20 transition-all text-sm"
+              className="w-full bg-muted/50 border border-border rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-ring transition-all text-sm text-foreground placeholder:text-muted-foreground"
               placeholder="Learned about Multi-Head Attention..."
             />
           </div>
@@ -68,7 +68,7 @@ export default function Journal() {
             <textarea 
               value={localEntry.plan}
               onChange={(e) => handleChange('plan', e.target.value)}
-              className="w-full bg-charcoal-900/50 border border-white/10 rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-white/20 transition-all text-sm"
+              className="w-full bg-muted/50 border border-border rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-ring transition-all text-sm text-foreground placeholder:text-muted-foreground"
               placeholder="Fix the remaining bug and read chapter 3..."
             />
           </div>

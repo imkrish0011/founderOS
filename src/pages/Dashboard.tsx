@@ -59,7 +59,7 @@ export default function Dashboard() {
           </div>
           <Card className="glass-card p-6 flex flex-col justify-between min-h-[200px]">
             <div>
-              <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/5 text-muted-foreground border border-white/10 mb-4">
+              <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border mb-4">
                 No active task
               </div>
               <h3 className="text-xl font-medium mb-2 text-muted-foreground">Waiting for input...</h3>
@@ -72,7 +72,7 @@ export default function Dashboard() {
                 <Bug className="w-4 h-4" /> 
                 <span>0 bugs remaining</span>
               </div>
-              <Button variant="outline" size="sm" className="bg-white/5 border-white/10 hover:bg-white/10 rounded-lg group" asChild>
+              <Button variant="outline" size="sm" className="bg-muted/50 border-border hover:bg-muted rounded-lg group" asChild>
                 <Link to="/archviz">
                   Go to ArchViz <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -91,7 +91,7 @@ export default function Dashboard() {
           </div>
           <Card className="glass-card p-6 flex flex-col justify-between min-h-[200px]">
             <div>
-               <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/5 text-muted-foreground border border-white/10 mb-4">
+               <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border mb-4">
                 No active topic
               </div>
               <h3 className="text-xl font-medium mb-2 text-muted-foreground">Roadmap empty...</h3>
@@ -104,7 +104,7 @@ export default function Dashboard() {
                 <CheckCircle2 className="w-4 h-4" /> 
                 <span>0% completed</span>
               </div>
-              <Button variant="outline" size="sm" className="bg-white/5 border-white/10 hover:bg-white/10 rounded-lg group" asChild>
+              <Button variant="outline" size="sm" className="bg-muted/50 border-border hover:bg-muted rounded-lg group" asChild>
                 <Link to="/learning">
                   Go to Learning <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>

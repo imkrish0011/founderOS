@@ -10,7 +10,7 @@ export default function AppLayout() {
       {/* Main Content Area */}
       <main className="flex-1 flex flex-col h-screen overflow-hidden pb-16 md:pb-0">
         {/* Header Placeholder (with sunrise gradient) */}
-        <header className="h-16 flex items-center px-6 border-b border-border bg-charcoal-900/50 backdrop-blur z-10 shrink-0">
+        <header className="h-16 flex items-center px-6 border-b border-border bg-background/50 backdrop-blur z-10 shrink-0">
           <h2 className="text-lg sunrise-header font-medium">Good Morning, Krish 🌿</h2>
         </header>
 

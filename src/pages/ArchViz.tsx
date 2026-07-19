@@ -36,7 +36,7 @@ function MetricCard({
     <Card className="glass-card p-6 flex flex-col justify-center relative group">
       <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
         {!isEditing && (
-          <button onClick={() => setIsEditing(true)} className="p-1.5 bg-white/5 hover:bg-white/10 rounded-md text-muted-foreground hover:text-white transition-colors">
+          <button onClick={() => setIsEditing(true)} className="p-1.5 bg-accent/50 hover:bg-accent rounded-md text-muted-foreground hover:text-foreground transition-colors">
             <Edit2 className="w-4 h-4" />
           </button>
         )}
@@ -57,10 +57,10 @@ function MetricCard({
             autoFocus
             onKeyDown={(e) => e.key === 'Enter' && handleSave()}
           />
-          <button onClick={handleSave} className="p-2 bg-calmGreen/20 text-calmGreen rounded-md hover:bg-calmGreen/30 transition-colors">
+          <button onClick={handleSave} className="p-2 bg-green-500/20 text-green-500 rounded-md hover:bg-green-500/30 transition-colors">
             <Check className="w-5 h-5" />
           </button>
-          <button onClick={() => {setIsEditing(false); setEditValue(value.toString());}} className="p-2 bg-white/5 text-muted-foreground rounded-md hover:bg-white/10 transition-colors">
+          <button onClick={() => {setIsEditing(false); setEditValue(value.toString());}} className="p-2 bg-accent text-muted-foreground rounded-md hover:bg-accent/80 transition-colors">
             <X className="w-5 h-5" />
           </button>
         </div>
@@ -87,8 +87,8 @@ function DraggableTask({ task }: { task: ArchVizTask }) {
 
   return (
     <div ref={setNodeRef} style={style} {...listeners} {...attributes}>
-      <Card className="glass-card p-4 hover:border-white/20 transition-colors cursor-grab active:cursor-grabbing group">
-        <p className="text-sm font-medium leading-relaxed select-none">{task.title}</p>
+      <Card className="glass-card p-4 hover:border-border transition-colors cursor-grab active:cursor-grabbing group">
+        <p className="text-sm font-medium leading-relaxed select-none text-foreground">{task.title}</p>
       </Card>
     </div>
   );
@@ -104,14 +104,14 @@ function DroppableColumn({ status, tasks, onAddTask }: { status: TaskStatus, tas
     <div className="w-80 shrink-0 flex flex-col snap-center">
       <div className="flex items-center justify-between mb-4 px-1">
         <h3 className="text-sm font-medium uppercase tracking-wider text-muted-foreground">{status}</h3>
-        <span className="text-xs bg-white/10 px-2 py-0.5 rounded-full text-muted-foreground">
+        <span className="text-xs bg-muted px-2 py-0.5 rounded-full text-muted-foreground">
           {tasks.length}
         </span>
       </div>
       
       <div 
         ref={setNodeRef} 
-        className={`flex-1 space-y-3 min-h-[150px] p-2 -mx-2 rounded-xl transition-colors ${isOver ? 'bg-white/5' : ''}`}
+        className={`flex-1 space-y-3 min-h-[150px] p-2 -mx-2 rounded-xl transition-colors ${isOver ? 'bg-muted/20' : ''}`}
       >
         <AnimatePresence>
           {tasks.map(task => (
@@ -128,7 +128,7 @@ function DroppableColumn({ status, tasks, onAddTask }: { status: TaskStatus, tas
           ))}
         </AnimatePresence>
         
-        <button onClick={onAddTask} className="w-full py-3 border border-dashed border-white/10 rounded-xl text-sm text-muted-foreground hover:text-white hover:border-white/20 transition-all flex items-center justify-center gap-2 mt-4">
+        <button onClick={onAddTask} className="w-full py-3 border border-dashed border-border rounded-xl text-sm text-muted-foreground hover:text-foreground hover:border-muted-foreground/50 transition-all flex items-center justify-center gap-2 mt-4">
           <Plus className="w-4 h-4" /> Add Item
         </button>
       </div>
@@ -178,7 +178,7 @@ export default function ArchViz() {
           <h1 className="text-3xl font-light text-foreground mb-1 tracking-tight">ArchViz</h1>
           <p className="text-muted-foreground text-sm tracking-wide">Startup Management & Feature Pipeline</p>
         </div>
-        <Button onClick={() => handleAddTask('Ideas')} className="bg-white text-black hover:bg-white/90 rounded-lg">
+        <Button onClick={() => handleAddTask('Ideas')} className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg">
           <Plus className="w-4 h-4 mr-2" /> New Task
         </Button>
       </div>
@@ -199,7 +199,7 @@ export default function ArchViz() {
         />
       </div>
 
-      <div className="w-full h-px bg-white/5 my-4" />
+      <div className="w-full h-px bg-border my-4" />
 
       {/* Kanban Board with Drag and Drop */}
       <DndContext onDragEnd={handleDragEnd}>

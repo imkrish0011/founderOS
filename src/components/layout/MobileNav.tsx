@@ -15,15 +15,15 @@ const mobileNavItems = [
 
 export function MobileNav() {
   return (
-    <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 border-t border-border bg-charcoal-900/80 backdrop-blur-md z-50 flex items-center overflow-x-auto px-2 pb-safe scrollbar-none gap-2">
+    <nav className="md:hidden fixed bottom-0 left-0 right-0 h-16 border-t border-border bg-background/80 backdrop-blur-md z-50 flex items-center overflow-x-auto px-2 pb-safe scrollbar-none gap-2">
       {mobileNavItems.map((item) => (
         <NavLink
           key={item.path}
           to={item.path}
           className={({ isActive }) =>
             cn(
-              "flex flex-col items-center justify-center w-16 h-full space-y-1 transition-colors",
-              isActive ? "text-white" : "text-muted-foreground hover:text-white/80"
+              "flex flex-col items-center justify-center min-w-[64px] h-12 px-1 rounded-xl transition-all duration-200",
+              isActive ? "text-foreground bg-accent/50" : "text-muted-foreground hover:text-foreground/80 hover:bg-accent/20"
             )
           }
         >

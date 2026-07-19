@@ -3,8 +3,10 @@ import { Card } from '@/components/ui/card';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { useGithubCommits } from '@/hooks/useGithubCommits';
 import { ActivityCalendar, type ThemeInput } from 'react-activity-calendar';
+import { useTheme } from '@/components/ThemeProvider';
 
 export default function Progress() {
+  const { theme } = useTheme();
   const { phases, progress, loading } = useCurriculum();
   const { commitData, loading: commitsLoading } = useGithubCommits('imkrish0011/archviz');
 
@@ -98,7 +100,7 @@ export default function Progress() {
             <ActivityCalendar 
               data={calendarData} 
               theme={explicitTheme}
-              colorScheme="dark"
+              colorScheme={theme as any}
               hideTotalCount={true}
               hideColorLegend={false}
               blockRadius={2}
