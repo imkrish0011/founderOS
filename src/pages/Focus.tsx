@@ -29,18 +29,6 @@ export default function Focus() {
 
   return (
     <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center max-w-2xl mx-auto p-6 relative">
-      {/* Hidden YouTube Iframe for LoFi */}
-      {isMusicPlaying && (
-        <iframe 
-          width="1" 
-          height="1" 
-          src="https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1&loop=1&enablejsapi=1" 
-          title="YouTube video player" 
-          frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          className="absolute opacity-0 pointer-events-none"
-        />
-      )}
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -89,6 +77,33 @@ export default function Focus() {
             <Music className="w-6 h-6" />
           </Button>
         </div>
+
+        {/* Visible Music Widget */}
+        {isMusicPlaying && (
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mt-12 w-full max-w-sm mx-auto overflow-hidden rounded-2xl border border-border shadow-xl bg-card"
+          >
+            <div className="bg-muted p-3 border-b border-border flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Music className="w-4 h-4 text-primary" />
+                <span className="text-sm font-medium">Focus Ambience</span>
+              </div>
+            </div>
+            <div className="h-[200px] w-full">
+              <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1" 
+                title="YouTube video player" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              />
+            </div>
+          </motion.div>
+        )}
       </motion.div>
     </div>
   );

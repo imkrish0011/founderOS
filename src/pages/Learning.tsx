@@ -115,22 +115,77 @@ export default function Learning() {
                   {/* Modules & Topics */}
                   {phase.modules?.length > 0 && (
                     <div className="space-y-6">
-                      {phase.modules.map((mod: any, mIdx: number) => (
-                        <div key={mIdx}>
-                          <h4 className="text-sm font-medium uppercase tracking-widest text-foreground/70 mb-3 flex items-center gap-2">
-                            <Target className="w-3.5 h-3.5" />
-                            {mod.title}
-                          </h4>
+                      {phase.modules.map((mod: any, mIdx: number) => {
+                        const modVideoKey = Object.keys(VIDEO_MAPPING).find(key => 
+                          mod.title && mod.title.toLowerCase().includes(key)
+                        );
+                        
+                        return (
+                        <div key={mIdx} className="space-y-4">
+                          <div>
+                            <h4 className="text-sm font-medium uppercase tracking-widest text-foreground/70 mb-3 flex items-center gap-2">
+                              <Target className="w-3.5 h-3.5" />
+                              {mod.title}
+                            </h4>
+                            
+                            {/* Module-level Video Rendering */}
+                            {modVideoKey && VIDEO_MAPPING[modVideoKey] && (
+                              <div className="mb-4 space-y-4 max-w-lg">
+                                {VIDEO_MAPPING[modVideoKey].map((resource: VideoResource, rIdx: number) => (
+                                  <div key={rIdx} className="overflow-hidden rounded-xl border border-border bg-muted shadow-sm">
+                                    {resource.type === 'doc' ? (
+                                      <a 
+                                        href={resource.url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="block p-4 hover:bg-muted/80 transition-colors"
+                                        onClick={(e) => e.stopPropagation()}
+                                      >
+                                        <div className="flex items-center gap-2 text-primary font-medium">
+                                          <BookOpen className="w-4 h-4" />
+                                          {resource.title}
+                                          <span className="text-xs text-muted-foreground ml-auto">External Link</span>
+                                        </div>
+                                      </a>
+                                    ) : (
+                                      <>
+                                        <div className="p-3 border-b border-border bg-card/50 flex justify-between items-center">
+                                          <h5 className="text-sm font-medium text-foreground">{resource.title}</h5>
+                                          {resource.type === 'playlist' && (
+                                            <span className="text-[10px] px-2 py-0.5 bg-primary/20 text-primary rounded-full uppercase tracking-wider font-semibold">Playlist</span>
+                                          )}
+                                        </div>
+                                        <div className="aspect-video w-full bg-black/50">
+                                          <iframe 
+                                            width="100%" 
+                                            height="100%" 
+                                            src={resource.url} 
+                                            title={resource.title}
+                                            frameBorder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowFullScreen
+                                          />
+                                        </div>
+                                      </>
+                                    )}
+                                  </div>
+                                ))}
+                              </div>
+                            )}
+                          </div>
+                          
                           <div className="space-y-2 pl-5 border-l border-border">
                             {mod.topics?.map((topic: any, tIdx: number) => {
                               const topicId = `${phase.id}_${mIdx}_${tIdx}`;
                               const isCompleted = progress.completedTopics.includes(topicId);
                               
-                              // Find relevant video based on keywords in title
-                              const videoKey = Object.keys(VIDEO_MAPPING).find(key => 
-                                topic.title.toLowerCase().includes(key) || 
-                                (mod.title && mod.title.toLowerCase().includes(key))
+                              // Find relevant video strictly based on topic title
+                              const topicVideoKey = Object.keys(VIDEO_MAPPING).find(key => 
+                                topic.title.toLowerCase() === key || topic.title.toLowerCase().includes(key)
                               );
+                              
+                              // If this topic matches the module video exactly, don't duplicate it
+                              const showTopicVideo = topicVideoKey && topicVideoKey !== modVideoKey;
                               
                               return (
                                 <div key={tIdx} className="group/topic">
@@ -160,10 +215,10 @@ export default function Learning() {
                                         </ul>
                                       )}
 
-                                      {/* Contextual Video Rendering */}
-                                      {!isCompleted && videoKey && VIDEO_MAPPING[videoKey] && (
+                                      {/* Topic-specific Video Rendering */}
+                                      {!isCompleted && showTopicVideo && topicVideoKey && VIDEO_MAPPING[topicVideoKey] && (
                                         <div className="mt-4 mb-2 space-y-4">
-                                          {VIDEO_MAPPING[videoKey].map((resource: VideoResource, rIdx: number) => (
+                                          {VIDEO_MAPPING[topicVideoKey].map((resource: VideoResource, rIdx: number) => (
                                             <div key={rIdx} className="overflow-hidden rounded-xl border border-border bg-muted shadow-sm">
                                               {resource.type === 'doc' ? (
                                                 <a 
@@ -181,10 +236,10 @@ export default function Learning() {
                                                 </a>
                                               ) : (
                                                 <>
-                                                  <div className="p-3 border-b border-border bg-card/50">
+                                                  <div className="p-3 border-b border-border bg-card/50 flex justify-between items-center">
                                                     <h5 className="text-sm font-medium text-foreground">{resource.title}</h5>
                                                     {resource.type === 'playlist' && (
-                                                      <span className="text-[10px] uppercase tracking-wider text-muted-foreground">Full Playlist</span>
+                                                      <span className="text-[10px] px-2 py-0.5 bg-primary/20 text-primary rounded-full uppercase tracking-wider font-semibold">Playlist</span>
                                                     )}
                                                   </div>
                                                   <div className="aspect-video w-full bg-black/50">
@@ -211,7 +266,7 @@ export default function Learning() {
                             })}
                           </div>
                         </div>
-                      ))}
+                      )})}
                     </div>
                   )}
 
