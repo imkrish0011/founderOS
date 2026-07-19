@@ -94,6 +94,7 @@ function DraggableTask({ task, onClick }: { task: ArchVizTask, onClick: () => vo
   return (
     <div ref={setNodeRef} style={style} {...attributes}>
       <Card 
+        onClick={onClick}
         className="glass-card p-4 hover:border-border transition-colors cursor-grab active:cursor-grabbing group"
       >
         <div className="flex flex-col gap-3" {...listeners}>
@@ -466,6 +467,28 @@ export default function ArchViz() {
                   }}
                 >
                   <Plus className="w-4 h-4 mr-2" /> Add Subtask
+                </Button>
+              </div>
+
+              <div className="flex justify-between items-center mt-6 pt-6 border-t border-border">
+                <Button 
+                  variant="outline" 
+                  className="text-red-500 hover:text-red-600 hover:bg-red-500/10 border-red-500/20"
+                  onClick={() => {
+                    const newTasks = localTasks.filter(t => t.id !== selectedTask.id);
+                    setLocalTasks(newTasks);
+                    saveTasks(newTasks);
+                    setSelectedTask(null);
+                  }}
+                >
+                  Delete Task
+                </Button>
+                
+                <Button 
+                  onClick={() => setSelectedTask(null)}
+                  className="bg-primary text-primary-foreground hover:bg-primary/90"
+                >
+                  Done
                 </Button>
               </div>
 
