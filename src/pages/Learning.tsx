@@ -3,6 +3,13 @@ import { BookOpen, CheckCircle2, Circle, Trophy, Target, Clock, Zap } from 'luci
 import { Card } from '@/components/ui/card';
 import { useCurriculum } from '@/hooks/useCurriculum';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
+const VIDEO_MAPPING: Record<string, string> = {
+  "python": "https://www.youtube.com/embed/rfscVS0vtbw",
+  "react": "https://www.youtube.com/embed/bMknfKXIFA8",
+  "javascript": "https://www.youtube.com/embed/jS4aFq5-91M",
+  "startup": "https://www.youtube.com/embed/t_jHrxd-xGo",
+  "pitch": "https://www.youtube.com/embed/t_jHrxd-xGo"
+};
 
 export default function Learning() {
   const { phases, progress, loading, toggleTopic, toggleProject } = useCurriculum();
@@ -71,52 +78,6 @@ export default function Learning() {
         </Card>
       </div>
 
-      {/* Recommended Videos & Courses */}
-      <div className="space-y-6">
-        <div className="flex items-center gap-2">
-          <BookOpen className="w-5 h-5 text-primary" />
-          <h2 className="text-xl font-light tracking-tight text-foreground">Recommended Resources</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {/* Hardcoded YouTube/Course Embeds */}
-          <Card className="glass-card overflow-hidden">
-            <div className="aspect-video w-full bg-muted">
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/bMknfKXIFA8" 
-                title="React Course" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="font-medium text-foreground">React Course - Beginner's Tutorial</h3>
-              <p className="text-xs text-muted-foreground mt-1">FreeCodeCamp</p>
-            </div>
-          </Card>
-
-          <Card className="glass-card overflow-hidden">
-            <div className="aspect-video w-full bg-muted">
-              <iframe 
-                width="100%" 
-                height="100%" 
-                src="https://www.youtube.com/embed/t_jHrxd-xGo" 
-                title="YCombinator Startup School" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              />
-            </div>
-            <div className="p-4">
-              <h3 className="font-medium text-foreground">How to Start a Startup</h3>
-              <p className="text-xs text-muted-foreground mt-1">Y Combinator</p>
-            </div>
-          </Card>
-        </div>
-      </div>
-
       <div className="w-full h-px bg-border my-8" />
 
       <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
@@ -171,6 +132,12 @@ export default function Learning() {
                               const topicId = `${phase.id}_${mIdx}_${tIdx}`;
                               const isCompleted = progress.completedTopics.includes(topicId);
                               
+                              // Find relevant video based on keywords in title
+                              const videoKey = Object.keys(VIDEO_MAPPING).find(key => 
+                                topic.title.toLowerCase().includes(key) || 
+                                (mod.title && mod.title.toLowerCase().includes(key))
+                              );
+                              
                               return (
                                 <div key={tIdx} className="group/topic">
                                   <button 
@@ -197,6 +164,23 @@ export default function Learning() {
                                             </li>
                                           ))}
                                         </ul>
+                                      )}
+
+                                      {/* Contextual Video Rendering */}
+                                      {!isCompleted && videoKey && (
+                                        <div className="mt-4 mb-2 overflow-hidden rounded-xl border border-border shadow-sm">
+                                          <div className="aspect-video w-full bg-muted">
+                                            <iframe 
+                                              width="100%" 
+                                              height="100%" 
+                                              src={VIDEO_MAPPING[videoKey]} 
+                                              title={`${videoKey} tutorial`}
+                                              frameBorder="0" 
+                                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                              allowFullScreen
+                                            />
+                                          </div>
+                                        </div>
                                       )}
                                     </div>
                                   </button>
