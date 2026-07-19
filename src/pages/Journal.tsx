@@ -1,25 +1,54 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useJournal } from '@/hooks/useJournal';
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import Placeholder from '@tiptap/extension-placeholder';
 
 export default function Journal() {
   const { entry, saveEntry, loading, saving, today } = useJournal();
-  
-  // Local state for smooth typing without waiting for Firestore callback
-  const [localEntry, setLocalEntry] = useState(entry);
 
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      Placeholder.configure({
+        placeholder: 'Write your daily reflection... (Type / for commands)',
+      }),
+    ],
+    content: entry.content || `
+      <h2>1. What did I accomplish today?</h2><p></p>
+      <h2>2. What did I learn today?</h2><p></p>
+      <h2>3. Tomorrow's plan?</h2><p></p>
+    `,
+    onUpdate: ({ editor }) => {
+      // We don't save on every keystroke to Firebase to avoid spam, we rely on the save button
+    },
+    editorProps: {
+      attributes: {
+        class: 'prose prose-invert max-w-none focus:outline-none min-h-[500px]',
+      },
+    },
+  });
+
+  // Re-sync if entry from db changes (e.g. initial load)
   useEffect(() => {
-    setLocalEntry(entry);
-  }, [entry]);
-
-  const handleChange = (field: keyof typeof entry, value: string) => {
-    setLocalEntry(prev => ({ ...prev, [field]: value }));
-  };
+    if (editor && !editor.isFocused && entry.content) {
+      editor.commands.setContent(entry.content);
+    } else if (editor && !editor.isFocused && !entry.content && !loading) {
+       editor.commands.setContent(`
+        <h2>1. What did I accomplish today?</h2><p></p>
+        <h2>2. What did I learn today?</h2><p></p>
+        <h2>3. Tomorrow's plan?</h2><p></p>
+      `);
+    }
+  }, [entry.content, editor, loading]);
 
   const handleSave = () => {
-    saveEntry(localEntry);
+    if (editor) {
+      saveEntry({ content: editor.getHTML() });
+    }
   };
 
   return (
@@ -37,47 +66,16 @@ export default function Journal() {
         transition={{ duration: 0.4 }}
       >
         <Card className={`glass-card p-6 md:p-10 space-y-8 ${loading ? 'opacity-50 pointer-events-none' : ''}`}>
-          <div className="space-y-3">
-            <label className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
-              1. What did I accomplish today?
-            </label>
-            <textarea 
-              value={localEntry.accomplished}
-              onChange={(e) => handleChange('accomplished', e.target.value)}
-              className="w-full bg-muted/50 border border-border rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-ring transition-all text-sm text-foreground placeholder:text-muted-foreground"
-              placeholder="Built the new canvas feature..."
-            />
-          </div>
-
-          <div className="space-y-3">
-            <label className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
-              2. What did I learn today?
-            </label>
-            <textarea 
-              value={localEntry.learned}
-              onChange={(e) => handleChange('learned', e.target.value)}
-              className="w-full bg-muted/50 border border-border rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-ring transition-all text-sm text-foreground placeholder:text-muted-foreground"
-              placeholder="Learned about Multi-Head Attention..."
-            />
-          </div>
-
-          <div className="space-y-3">
-            <label className="text-sm font-medium tracking-wide text-muted-foreground uppercase">
-              3. Tomorrow's plan?
-            </label>
-            <textarea 
-              value={localEntry.plan}
-              onChange={(e) => handleChange('plan', e.target.value)}
-              className="w-full bg-muted/50 border border-border rounded-xl p-4 min-h-[100px] resize-none focus:outline-none focus:ring-1 focus:ring-ring transition-all text-sm text-foreground placeholder:text-muted-foreground"
-              placeholder="Fix the remaining bug and read chapter 3..."
-            />
+          
+          <div className="bg-background/50 rounded-xl p-4 border border-border">
+            <EditorContent editor={editor} />
           </div>
 
           <div className="flex justify-end pt-4">
             <Button 
               onClick={handleSave}
               disabled={saving || loading}
-              className="bg-white text-black hover:bg-white/90 rounded-lg px-8 transition-all"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-lg px-8 transition-all"
             >
               {saving ? 'Saving...' : 'Save Entry'}
             </Button>

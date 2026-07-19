@@ -4,9 +4,10 @@ import { db } from '@/lib/firebase';
 import { useAuth } from '@/store/useAuth';
 
 export interface JournalEntry {
-  accomplished: string;
-  learned: string;
-  plan: string;
+  accomplished?: string;
+  learned?: string;
+  plan?: string;
+  content?: string;
   date: string;
 }
 

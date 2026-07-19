@@ -189,12 +189,11 @@ export default function ArchViz() {
   }, [metrics.tasks]);
 
   const handleAddTask = (status: TaskStatus = 'Ideas') => {
-    const title = window.prompt('Enter task title:');
-    if (title && title.trim()) {
-      const newTasks = [...localTasks, { id: crypto.randomUUID(), title: title.trim(), status }];
-      setLocalTasks(newTasks);
-      saveTasks(newTasks);
-    }
+    const newTask: ArchVizTask = { id: crypto.randomUUID(), title: '', status };
+    const newTasks = [...localTasks, newTask];
+    setLocalTasks(newTasks);
+    saveTasks(newTasks);
+    setSelectedTask(newTask); // Open modal immediately for editing
   };
 
   const handleDragEnd = (event: DragEndEvent) => {

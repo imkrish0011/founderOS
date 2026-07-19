@@ -1,46 +1,48 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Play, Square, RefreshCcw } from 'lucide-react';
+import { Play, Square, RefreshCcw, Music } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useFocus } from '@/hooks/useFocus';
-
-const INITIAL_TIME = 50 * 60; // 50 minutes
+import { useTimerStore, INITIAL_TIME } from '@/store/useTimerStore';
 
 export default function Focus() {
-  const [timeLeft, setTimeLeft] = useState(INITIAL_TIME);
-  const [isRunning, setIsRunning] = useState(false);
-  const [task, setTask] = useState('');
+  const { timeLeft, isRunning, isMusicPlaying, task, setTask, toggleTimer, resetTimer, tick, toggleMusic, setRunning } = useTimerStore();
   const { logSession } = useFocus();
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
     if (isRunning && timeLeft > 0) {
       interval = setInterval(() => {
-        setTimeLeft((prev) => prev - 1);
+        tick();
       }, 1000);
     } else if (timeLeft === 0 && isRunning) {
-      setIsRunning(false);
+      setRunning(false);
       logSession(50); // Log 50 minutes when timer reaches 0 naturally
       alert("Pomodoro complete! Logged 50 minutes of focus time.");
     }
     return () => clearInterval(interval);
-  }, [isRunning, timeLeft]);
-
-  const toggleTimer = () => setIsRunning(!isRunning);
-  
-  const resetTimer = () => {
-    setIsRunning(false);
-    // If they were partially through, maybe we want to log the diff? 
-    // For simplicity, we just reset.
-    setTimeLeft(INITIAL_TIME);
-  };
+  }, [isRunning, timeLeft, tick, setRunning, logSession]);
 
   const minutes = Math.floor(timeLeft / 60);
   const seconds = timeLeft % 60;
 
   return (
-    <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center max-w-2xl mx-auto p-6">
+    <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center max-w-2xl mx-auto p-6 relative">
+      {/* Hidden YouTube Iframe for LoFi */}
+      {isMusicPlaying && (
+        <iframe 
+          width="0" 
+          height="0" 
+          src="https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1&loop=1" 
+          title="YouTube video player" 
+          frameBorder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+          allowFullScreen
+          className="hidden"
+        />
+      )}
+
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -77,6 +79,15 @@ export default function Focus() {
             className="w-16 h-16 rounded-full text-muted-foreground hover:text-foreground"
           >
             <RefreshCcw className="w-6 h-6" />
+          </Button>
+          <Button 
+            onClick={toggleMusic}
+            variant="ghost" 
+            size="icon" 
+            className={`w-16 h-16 rounded-full transition-colors ${isMusicPlaying ? 'text-primary bg-primary/10' : 'text-muted-foreground hover:text-foreground'}`}
+            title="Toggle Lo-Fi Ambience"
+          >
+            <Music className="w-6 h-6" />
           </Button>
         </div>
       </motion.div>
