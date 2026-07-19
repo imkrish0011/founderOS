@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
-import { useState, useMemo } from 'react';
 import { BookOpen, CheckCircle2, Circle, Trophy, Target, Clock, Zap } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { useCurriculum } from '@/hooks/useCurriculum';
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
 
 export default function Learning() {
   const { phases, progress, loading, toggleTopic, toggleProject } = useCurriculum();
@@ -15,11 +15,60 @@ export default function Learning() {
     );
   }
 
+  // Calculate Progress
+  let totalTopics = 0;
+  phases.forEach(p => {
+    p.modules?.forEach((m: any) => {
+      totalTopics += (m.topics?.length || 0);
+    });
+  });
+  
+  const completedTopics = progress.completedTopics.length;
+  const remainingTopics = totalTopics - completedTopics;
+  
+  const chartData = [
+    { name: 'Completed', value: completedTopics, color: 'hsl(var(--primary))' },
+    { name: 'Remaining', value: remainingTopics, color: 'hsl(var(--muted))' }
+  ];
+
   return (
     <div className="max-w-5xl mx-auto space-y-12 pb-12">
-      <div>
-        <h1 className="text-3xl font-light text-foreground mb-1 tracking-tight">Learning Path</h1>
-        <p className="text-muted-foreground text-sm tracking-wide">Structured Curriculum & Progress</p>
+      <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div>
+          <h1 className="text-3xl font-light text-foreground mb-1 tracking-tight">Learning Path</h1>
+          <p className="text-muted-foreground text-sm tracking-wide">Structured Curriculum & Progress</p>
+        </div>
+        
+        {/* Progress Chart Widget */}
+        <Card className="glass-card flex items-center p-4 pr-6 shrink-0 gap-4">
+          <div className="w-20 h-20">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  innerRadius={25}
+                  outerRadius={35}
+                  paddingAngle={5}
+                  dataKey="value"
+                  stroke="none"
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={entry.color} />
+                  ))}
+                </Pie>
+                <Tooltip 
+                  cursor={{ fill: 'hsl(var(--muted))' }}
+                  contentStyle={{ backgroundColor: 'hsl(var(--card))', border: '1px solid hsl(var(--border))', borderRadius: '8px', fontSize: '12px' }}
+                  itemStyle={{ color: 'hsl(var(--foreground))' }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+          <div>
+            <div className="text-2xl font-light">{Math.round((completedTopics / Math.max(1, totalTopics)) * 100)}%</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Completion</div>
+          </div>
+        </Card>
       </div>
 
       <div className="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
