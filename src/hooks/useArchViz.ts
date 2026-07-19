@@ -4,11 +4,22 @@ import { db } from '@/lib/firebase';
 import { useAuth } from '@/store/useAuth';
 
 export type TaskStatus = 'Ideas' | 'Planned' | 'Building' | 'Completed';
+export type Priority = 'High' | 'Med' | 'Low';
+
+export interface SubTask {
+  id: string;
+  title: string;
+  completed: boolean;
+}
 
 export interface ArchVizTask {
   id: string;
   title: string;
   status: TaskStatus;
+  priority?: Priority;
+  dueDate?: string;
+  subtasks?: SubTask[];
+  description?: string;
 }
 
 export interface ArchVizMetrics {

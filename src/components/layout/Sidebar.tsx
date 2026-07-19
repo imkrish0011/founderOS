@@ -23,7 +23,10 @@ export function Sidebar() {
   return (
     <aside className="w-64 border-r border-border hidden md:flex flex-col bg-background/50 backdrop-blur">
       <div className="h-16 flex items-center justify-between px-6 border-b border-border">
-        <span className="font-medium tracking-wide text-foreground">FounderOS</span>
+        <div className="flex items-center gap-2">
+          <img src="/src/assets/logo.png" alt="FounderOS Logo" className="w-6 h-6 object-contain" />
+          <span className="font-medium tracking-wide text-foreground">FounderOS</span>
+        </div>
         <ThemeToggle />
       </div>
       
