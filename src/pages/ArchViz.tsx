@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { useArchViz, type TaskStatus, type ArchVizTask, type SubTask, type Priority } from '@/hooks/useArchViz';
-import { DndContext, useDroppable, useDraggable, type DragEndEvent } from '@dnd-kit/core';
+import { DndContext, useDroppable, useDraggable, type DragEndEvent, useSensor, useSensors, PointerSensor } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
 const COLUMNS: TaskStatus[] = ['Ideas', 'Planned', 'Building', 'Completed'];
@@ -183,6 +183,14 @@ export default function ArchViz() {
   const [viewMode, setViewMode] = useState<'kanban' | 'calendar'>('kanban');
   const [selectedTask, setSelectedTask] = useState<ArchVizTask | null>(null);
 
+  const sensors = useSensors(
+    useSensor(PointerSensor, {
+      activationConstraint: {
+        distance: 5,
+      },
+    })
+  );
+
   useEffect(() => {
     if (metrics.tasks) {
       setLocalTasks(metrics.tasks);
@@ -316,7 +324,7 @@ export default function ArchViz() {
       <div className="w-full h-px bg-border my-4" />
 
       {viewMode === 'kanban' ? (
-        <DndContext onDragEnd={handleDragEnd}>
+        <DndContext onDragEnd={handleDragEnd} sensors={sensors}>
           <div className="flex-1 flex gap-6 overflow-x-auto pb-4 snap-x">
             {COLUMNS.map((col) => (
               <DroppableColumn 

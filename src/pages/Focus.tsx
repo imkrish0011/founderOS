@@ -32,14 +32,13 @@ export default function Focus() {
       {/* Hidden YouTube Iframe for LoFi */}
       {isMusicPlaying && (
         <iframe 
-          width="0" 
-          height="0" 
-          src="https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1&loop=1" 
+          width="1" 
+          height="1" 
+          src="https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1&loop=1&enablejsapi=1" 
           title="YouTube video player" 
           frameBorder="0" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-          className="hidden"
+          className="absolute opacity-0 pointer-events-none"
         />
       )}
 
