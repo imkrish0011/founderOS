@@ -25,7 +25,7 @@ export default function AppLayout() {
         <header className="h-14 md:h-16 flex items-center justify-between px-3 md:px-6 border-b border-border bg-background/50 backdrop-blur z-10 shrink-0">
           <div className="flex items-center gap-2 min-w-0">
             <div className="md:hidden mr-1 flex-shrink-0">
-              <img src="/src/assets/logo.png" alt="FounderOS Logo" className="w-6 h-6 object-contain" style={{ mixBlendMode: 'screen' }} />
+              <img src="/logo.png" alt="FounderOS Logo" className="w-6 h-6 object-contain" style={{ mixBlendMode: 'screen' }} />
             </div>
             <h2 className="text-sm md:text-lg sunrise-header font-medium truncate">{getGreeting()}</h2>
           </div>

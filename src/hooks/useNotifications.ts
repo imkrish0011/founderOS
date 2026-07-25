@@ -29,7 +29,7 @@ export function useNotifications() {
         if (!notifiedTasks.current.has(task.id)) {
           new Notification('FounderOS Alert', {
             body: `High Priority Task Due Today: ${task.title || 'Untitled Task'}`,
-            icon: '/src/assets/logo.png',
+            icon: '/logo.png',
           });
           notifiedTasks.current.add(task.id);
         }
