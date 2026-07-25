@@ -82,3 +82,14 @@
 .glass-card {
   @apply bg-card border-border shadow-sm rounded-xl;
 }
+
+@layer utilities {
+  .hover-glow {
+    @apply transition-all duration-300;
+  }
+  .hover-glow:hover {
+    box-shadow: 0 0 20px 2px rgba(var(--primary), 0.15);
+    border-color: rgba(var(--primary), 0.3);
+    transform: translateY(-2px);
+  }
+}
