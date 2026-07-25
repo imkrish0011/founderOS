@@ -24,6 +24,9 @@ export default function Focus() {
   
   const [showCompletion, setShowCompletion] = useState(false);
   const [completionQuote, setCompletionQuote] = useState('');
+  
+  // Pick a random video index from the playlist on mount (1 to 20)
+  const [playlistIndex] = useState(() => Math.floor(Math.random() * 20) + 1);
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
@@ -304,7 +307,7 @@ export default function Focus() {
                 <iframe 
                   width="100%" 
                   height="100%" 
-                  src="https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1" 
+                  src={`https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1&index=${playlistIndex}`} 
                   title="Focus Ambience" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
