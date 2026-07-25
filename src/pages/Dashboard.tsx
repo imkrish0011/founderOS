@@ -3,7 +3,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Code, BookOpen, Bug, CheckCircle2, Zap, Flame, Clock, Target, Activity } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import GitHubCalendar from 'react-github-calendar';
+import { GitHubCalendar } from 'react-github-calendar';
 import { useStatsStore } from '@/store/useStatsStore';
 import { useTimerStore } from '@/store/useTimerStore';
 import { useLearning } from '@/store/useLearning';
@@ -15,9 +15,9 @@ const fadeIn = {
 
 export default function Dashboard() {
   const { focusSecondsThisWeek, dayStreak } = useStatsStore();
-  const { modules } = useLearning();
-  // Get first module with status in_progress or not_started
-  const activeModule = modules.find(m => m.status === 'in_progress') || modules.find(m => m.status === 'not_started');
+  const { topics } = useLearning();
+  // Get first topic with status active or locked
+  const activeTopic = topics.find(t => t.status === 'active') || topics.find(t => t.status === 'locked');
   
   const getGreeting = () => {
     const hour = new Date().getHours();
@@ -115,14 +115,14 @@ export default function Dashboard() {
           </div>
           <Card className="glass-card p-6 flex flex-col justify-between min-h-[200px] hover-glow transition-all duration-300">
             <div>
-              {activeModule ? (
+              {activeTopic ? (
                 <>
                   <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20 mb-4">
                     Up Next
                   </div>
-                  <h3 className="text-xl font-medium mb-2 text-foreground">{activeModule.title}</h3>
+                  <h3 className="text-xl font-medium mb-2 text-foreground">{activeTopic.title}</h3>
                   <p className="text-muted-foreground/80 text-sm line-clamp-2">
-                    {activeModule.description}
+                    {activeTopic.currentTopic || 'Dive in and learn something new.'}
                   </p>
                 </>
               ) : (
@@ -140,7 +140,7 @@ export default function Dashboard() {
             <div className="mt-6 flex items-center justify-between">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
                 <CheckCircle2 className="w-4 h-4 text-green-500" /> 
-                <span>{modules.filter(m => m.status === 'completed').length} completed</span>
+                <span>{topics.filter(t => t.status === 'completed').length} completed</span>
               </div>
               <Button variant="outline" size="sm" className="bg-muted/50 border-border hover:bg-muted rounded-lg group transition-all" asChild>
                 <Link to="/learning">
@@ -175,8 +175,8 @@ export default function Dashboard() {
             <Card className="glass-card p-4 flex flex-col justify-center items-center text-center relative overflow-hidden group">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
               <BookOpen className="w-5 h-5 text-blue-500 mb-2 opacity-70" />
-              <span className="text-3xl font-light mb-1">{modules.filter(m => m.status === 'completed').length}</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Modules Done</span>
+              <span className="text-3xl font-light mb-1">{topics.filter(t => t.status === 'completed').length}</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider">Topics Done</span>
             </Card>
             <Card className="glass-card p-4 flex flex-col justify-center items-center text-center relative overflow-hidden group">
                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
