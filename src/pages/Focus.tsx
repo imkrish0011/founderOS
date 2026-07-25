@@ -17,22 +17,12 @@ const completionQuotes = [
 ];
 
 export default function Focus() {
-  const { timeLeft, totalTime, isRunning, isMusicPlaying, task, activePreset, sessionsToday,
-    setTask, toggleTimer, resetTimer, tick, toggleMusic, setRunning, setPreset } = useTimerStore();
+  const { timeLeft, totalTime, isRunning, task, activePreset, sessionsToday,
+    setTask, toggleTimer, resetTimer, tick, setRunning, setPreset } = useTimerStore();
   const { logSession } = useFocus();
   const { dayStreak } = useStatsStore();
-  
-  // Handpicked, highly-reliable focus and ambient music livestreams/videos
-  const FOCUS_VIDEOS = [
-    'jfKfPfyJRdk', // Lofi Girl 24/7
-    '4xDzrUhVKVA', // Synthwave Radio
-    'lTRiuFIWV54', // Blade Runner Ambient
-    '7NOSDKb0HlU', // Deep Space Ambient Focus
-    'aLgjmYk1HMA'  // Deep Focus Coding Music
-  ];
-
-  // Pick a random video on mount
-  const [playlistIndex] = useState(() => Math.floor(Math.random() * FOCUS_VIDEOS.length));
+  const [showCompletion, setShowCompletion] = useState(false);
+  const [completionQuote, setCompletionQuote] = useState('');
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
@@ -225,15 +215,6 @@ export default function Focus() {
           >
             <RefreshCcw className="w-5 h-5 md:w-6 md:h-6" />
           </Button>
-          <Button 
-            onClick={toggleMusic}
-            variant="ghost" 
-            size="icon" 
-            className={`w-14 h-14 md:w-16 md:h-16 rounded-full transition-colors ${isMusicPlaying ? 'text-primary bg-primary/10' : 'text-muted-foreground hover:text-foreground'}`}
-            title="Toggle Lo-Fi Ambience"
-          >
-            <Music className="w-5 h-5 md:w-6 md:h-6" />
-          </Button>
         </div>
 
         {/* Session Stats Row */}
@@ -288,40 +269,6 @@ export default function Focus() {
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Visible Music Widget */}
-        <AnimatePresence>
-          {isMusicPlaying && (
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="w-full max-w-sm mx-auto overflow-hidden rounded-2xl border border-border shadow-xl bg-card"
-            >
-              <div className="bg-muted p-3 border-b border-border flex items-center justify-between">
-                <div className="flex items-center gap-2">
-                  <Music className="w-4 h-4 text-primary" />
-                  <span className="text-sm font-medium">Focus Ambience</span>
-                </div>
-                <div className="flex items-center gap-1">
-                  <div className="w-1 h-3 bg-primary/60 rounded-full animate-pulse" />
-                  <div className="w-1 h-4 bg-primary/80 rounded-full animate-pulse" style={{ animationDelay: '150ms' }} />
-                  <div className="w-1 h-2 bg-primary/40 rounded-full animate-pulse" style={{ animationDelay: '300ms' }} />
-                </div>
-              </div>
-              <div className="h-[180px] md:h-[200px] w-full">
-                <iframe 
-                  width="100%" 
-                  height="100%" 
-                  src={`https://www.youtube.com/embed/${FOCUS_VIDEOS[playlistIndex]}?autoplay=1`} 
-                  title="Focus Ambience" 
-                  frameBorder="0" 
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen
-                />
-              </div>
-            </motion.div>
-          )}
         </AnimatePresence>
 
       </motion.div>
