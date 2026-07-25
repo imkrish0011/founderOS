@@ -269,7 +269,6 @@ export default function Focus() {
             </motion.div>
           )}
         </AnimatePresence>
-        </AnimatePresence>
 
       </motion.div>
     </div>
