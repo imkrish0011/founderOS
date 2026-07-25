@@ -25,8 +25,8 @@ export default function Focus() {
   const [showCompletion, setShowCompletion] = useState(false);
   const [completionQuote, setCompletionQuote] = useState('');
   
-  // Pick a random video index from the playlist on mount (1 to 20)
-  const [playlistIndex] = useState(() => Math.floor(Math.random() * 20) + 1);
+  // Pick a random video index from the playlist on mount (0 to 6)
+  const [playlistIndex] = useState(() => Math.floor(Math.random() * 7));
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
