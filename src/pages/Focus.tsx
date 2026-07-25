@@ -22,11 +22,17 @@ export default function Focus() {
   const { logSession } = useFocus();
   const { dayStreak } = useStatsStore();
   
-  const [showCompletion, setShowCompletion] = useState(false);
-  const [completionQuote, setCompletionQuote] = useState('');
-  
-  // Pick a random video index from the playlist on mount (0 to 6)
-  const [playlistIndex] = useState(() => Math.floor(Math.random() * 7));
+  // Handpicked, highly-reliable focus and ambient music livestreams/videos
+  const FOCUS_VIDEOS = [
+    'jfKfPfyJRdk', // Lofi Girl 24/7
+    '4xDzrUhVKVA', // Synthwave Radio
+    'lTRiuFIWV54', // Blade Runner Ambient
+    '7NOSDKb0HlU', // Deep Space Ambient Focus
+    'aLgjmYk1HMA'  // Deep Focus Coding Music
+  ];
+
+  // Pick a random video on mount
+  const [playlistIndex] = useState(() => Math.floor(Math.random() * FOCUS_VIDEOS.length));
 
   useEffect(() => {
     let interval: ReturnType<typeof setInterval>;
@@ -307,7 +313,7 @@ export default function Focus() {
                 <iframe 
                   width="100%" 
                   height="100%" 
-                  src={`https://www.youtube.com/embed/videoseries?list=PLp8f7jp0nePpk1LYE-lP50W2t13h0E4JQ&autoplay=1&index=${playlistIndex}`} 
+                  src={`https://www.youtube.com/embed/${FOCUS_VIDEOS[playlistIndex]}?autoplay=1`} 
                   title="Focus Ambience" 
                   frameBorder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
