@@ -106,7 +106,7 @@ export default function Progress() {
                 ${activeTab === stat.label ? 'border-primary shadow-[0_0_15px_rgba(var(--primary),0.1)]' : ''}
                 ${loading || parseInt(stat.value) === 0 ? 'opacity-50' : ''}`}
             >
-              <span className="text-4xl font-light mb-2">{stat.value}</span>
+              <span className="text-2xl md:text-4xl font-light mb-2">{stat.value}</span>
               <span className="text-xs text-muted-foreground uppercase tracking-widest mb-1">{stat.label}</span>
               <span className="text-[10px] text-muted-foreground">{stat.trend}</span>
             </Card>
@@ -127,7 +127,7 @@ export default function Progress() {
               <span>{activeTab}</span>
               <span className="text-xs normal-case tracking-normal">Last 7 Days</span>
             </h3>
-            <div className="w-full h-[300px]">
+            <div className="w-full h-[200px] md:h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
                 {renderChart()}
               </ResponsiveContainer>

@@ -28,7 +28,7 @@ export default function Focus() {
   const seconds = timeLeft % 60;
 
   return (
-    <div className="h-[calc(100vh-8rem)] flex flex-col items-center justify-center max-w-2xl mx-auto p-6 relative">
+    <div className="min-h-[calc(100vh-8rem)] flex flex-col items-center justify-center max-w-2xl mx-auto px-4 py-6 md:p-6 relative">
 
       <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
@@ -46,7 +46,7 @@ export default function Focus() {
           <div className="w-16 h-px bg-border mx-auto" />
         </div>
 
-        <div className="text-8xl md:text-[140px] font-light tracking-tighter text-foreground tabular-nums select-none">
+        <div className="text-6xl sm:text-8xl md:text-[140px] font-light tracking-tighter text-foreground tabular-nums select-none">
           {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
         </div>
 
@@ -83,7 +83,7 @@ export default function Focus() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="mt-12 w-full max-w-sm mx-auto overflow-hidden rounded-2xl border border-border shadow-xl bg-card"
+            className="mt-8 md:mt-12 w-full max-w-sm mx-auto overflow-hidden rounded-2xl border border-border shadow-xl bg-card"
           >
             <div className="bg-muted p-3 border-b border-border flex items-center justify-between">
               <div className="flex items-center gap-2">

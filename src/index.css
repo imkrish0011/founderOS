@@ -93,3 +93,29 @@
     transform: translateY(-2px);
   }
 }
+
+/* Mobile safe area and smooth scroll */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent text selection on interactive elements on mobile */
+.select-none-touch {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+/* Responsive GitHub calendar */
+@media (max-width: 768px) {
+  .react-activity-calendar {
+    font-size: 10px !important;
+  }
+}
+

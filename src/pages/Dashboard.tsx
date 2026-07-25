@@ -206,7 +206,7 @@ export default function Dashboard() {
             </h2>
           </div>
           <Card className="glass-card p-6 flex items-center justify-center min-h-[180px] hover-glow transition-all duration-300 relative overflow-hidden text-center bg-gradient-to-tr from-card to-muted/10">
-             <Quote className="absolute -left-4 -top-4 w-32 h-32 text-muted/20 rotate-12" />
+             <Quote className="absolute -left-4 -top-4 w-20 h-20 md:w-32 md:h-32 text-muted/20 rotate-12" />
              <AnimatePresence mode="wait">
                <motion.p 
                   key={quoteIndex}
@@ -272,17 +272,17 @@ export default function Dashboard() {
               @imkrish0011 <ArrowRight className="w-3 h-3" />
             </a>
           </div>
-          <Card className="glass-card p-6 flex justify-center items-center overflow-x-auto relative group hover:border-primary/30 transition-colors">
+          <Card className="glass-card p-3 md:p-6 flex justify-center items-center overflow-x-auto relative group hover:border-primary/30 transition-colors">
             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none rounded-xl"></div>
-            <div className="min-w-[700px] z-10">
+            <div className="w-full z-10 overflow-x-auto">
               <GitHubCalendar 
                 username="imkrish0011" 
                 colorScheme="dark"
-                fontSize={12}
-                blockSize={12}
-                blockMargin={4}
+                fontSize={11}
+                blockSize={10}
+                blockMargin={3}
                 renderBlock={(block, activity) =>
-                  React.cloneElement(block as React.ReactElement, {
+                  React.cloneElement(block as React.ReactElement<Record<string, unknown>>, {
                     'data-tooltip-id': 'github-tooltip',
                     'data-tooltip-content': `${activity.count} commits on ${activity.date}`,
                   })
