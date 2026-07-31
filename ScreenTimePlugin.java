@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.provider.Settings;
 
+import com.getcapacitor.JSArray;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
@@ -49,9 +50,28 @@ public class ScreenTimePlugin extends Plugin {
         UsageStatsManager usm = (UsageStatsManager) getContext().getSystemService(Context.USAGE_STATS_SERVICE);
         List<UsageStats> usageStatsList = usm.queryUsageStats(UsageStatsManager.INTERVAL_DAILY, startTime, endTime);
 
+        long totalTimeMs = 0;
+        JSArray apps = new JSArray();
+
+        if (usageStatsList != null) {
+            for (UsageStats stats : usageStatsList) {
+                long timeInForeground = stats.getTotalTimeInForeground();
+                if (timeInForeground > 0) {
+                    totalTimeMs += timeInForeground;
+                    
+                    try {
+                        JSObject appObj = new JSObject();
+                        appObj.put("packageName", stats.getPackageName());
+                        appObj.put("timeMs", timeInForeground);
+                        apps.put(appObj);
+                    } catch (Exception e) {}
+                }
+            }
+        }
+
         JSObject ret = new JSObject();
-        // Just a simplified example. In a real app, you'd serialize the list.
-        ret.put("count", usageStatsList.size());
+        ret.put("totalTimeMs", totalTimeMs);
+        ret.put("apps", apps);
         call.resolve(ret);
     }
 

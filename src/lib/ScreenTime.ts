@@ -5,7 +5,7 @@ export interface ScreenTimePlugin {
    * Fetches the screen time stats for the given time range.
    * Requires PACKAGE_USAGE_STATS permission on Android.
    */
-  getUsageStats(options: { startTime: number; endTime: number }): Promise<{ stats: any[] }>;
+  getUsageStats(options: { startTime: number; endTime: number }): Promise<{ totalTimeMs: number; apps: { packageName: string, timeMs: number }[] }>;
   
   /**
    * Prompts the user to open settings to grant the usage access permission.

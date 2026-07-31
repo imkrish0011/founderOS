@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, KanbanSquare, GraduationCap, Library, BookOpen, LineChart, Target, LogOut } from 'lucide-react';
+import { LayoutDashboard, KanbanSquare, MonitorSmartphone, BookOpen, LineChart, Target, LogOut } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { signOut } from 'firebase/auth';
 import { auth } from '@/lib/firebase';
@@ -8,8 +8,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 const navItems = [
   { name: 'Dashboard', path: '/', icon: LayoutDashboard },
   { name: 'ArchViz', path: '/archviz', icon: KanbanSquare },
-  { name: 'Screen Time', path: '/screentime', icon: GraduationCap },
-  { name: 'Library', path: '/library', icon: Library },
+  { name: 'Screen Time', path: '/screentime', icon: MonitorSmartphone },
   { name: 'Journal', path: '/journal', icon: BookOpen },
   { name: 'Progress', path: '/progress', icon: LineChart },
   { name: 'Focus', path: '/focus', icon: Target },

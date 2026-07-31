@@ -1,13 +1,12 @@
 import { NavLink } from 'react-router-dom';
-import { LayoutDashboard, KanbanSquare, GraduationCap, Target, BookOpen, BookText, TrendingUp, Library } from 'lucide-react';
+import { LayoutDashboard, KanbanSquare, MonitorSmartphone, Target, BookOpen, BookText, TrendingUp } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 // Show all items on mobile bottom nav, but make them scrollable horizontally
 const mobileNavItems = [
   { name: 'Home', path: '/', icon: LayoutDashboard },
   { name: 'ArchViz', path: '/archviz', icon: KanbanSquare },
-  { name: 'Screen Time', path: '/screentime', icon: GraduationCap },
-  { name: 'Library', path: '/library', icon: Library },
+  { name: 'Screen Time', path: '/screentime', icon: MonitorSmartphone },
   { name: 'Journal', path: '/journal', icon: BookText },
   { name: 'Progress', path: '/progress', icon: TrendingUp },
   { name: 'Focus', path: '/focus', icon: Target },

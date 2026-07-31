@@ -6,9 +6,10 @@ import { ArrowRight, Code, BookOpen, Bug, CheckCircle2, Zap, Flame, Clock, Targe
 import { Link } from 'react-router-dom';
 import { GitHubCalendar } from 'react-github-calendar';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
-import 'react-tooltip/dist/react-tooltip.css';
 import { useStatsStore } from '@/store/useStatsStore';
 import { useTimerStore } from '@/store/useTimerStore';
+import { Capacitor } from '@capacitor/core';
+import ScreenTimePlugin from '@/lib/ScreenTime';
 
 const quotes = [
   "The secret of getting ahead is getting started. – Mark Twain",
@@ -41,6 +42,26 @@ export default function Dashboard() {
       setQuoteIndex((prev) => (prev + 1) % quotes.length);
     }, 12000);
     return () => clearInterval(quoteTimer);
+  }, []);
+
+  const [screenTimeMs, setScreenTimeMs] = useState(0);
+
+  useEffect(() => {
+    async function getScreenTime() {
+      if (Capacitor.isNativePlatform()) {
+        try {
+          const perm = await ScreenTimePlugin.checkUsagePermission();
+          if (perm.granted) {
+            const startOfDay = new Date().setHours(0,0,0,0);
+            const data = await ScreenTimePlugin.getUsageStats({ startTime: startOfDay, endTime: Date.now() });
+            setScreenTimeMs(data.totalTimeMs || 0);
+          }
+        } catch (e) {
+          console.error("ScreenTime error", e);
+        }
+      }
+    }
+    getScreenTime();
   }, []);
 
 
@@ -156,20 +177,22 @@ export default function Dashboard() {
               Screen Time
             </h2>
           </div>
-          <Card className="glass-card p-6 flex flex-col justify-between min-h-[180px] hover-glow transition-all duration-300 relative overflow-hidden">
-             <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl"></div>
+          <Card className="glass-card bg-slate-900/50 border-slate-800 p-6 flex flex-col justify-between min-h-[180px] hover:bg-slate-900/70 transition-all duration-300 relative overflow-hidden">
+             <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-slate-500/5 rounded-full blur-2xl"></div>
             <div className="relative z-10">
-              <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500 border border-blue-500/20 mb-4">
+              <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-slate-500/10 text-slate-400 border border-slate-500/20 mb-4">
                 Within Limits
               </div>
-              <h3 className="text-xl font-medium mb-2 text-foreground line-clamp-1">3h 45m today</h3>
+              <h3 className="text-xl font-medium mb-2 text-foreground line-clamp-1">
+                {screenTimeMs > 0 ? `${Math.floor(screenTimeMs / 3600000)}h ${Math.floor((screenTimeMs % 3600000) / 60000)}m today` : 'No Data'}
+              </h3>
               <p className="text-muted-foreground/80 text-sm line-clamp-2">
                 You're keeping your digital footprint clean.
               </p>
             </div>
             <div className="mt-6 flex items-center justify-between relative z-10">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <Smartphone className="w-4 h-4 text-blue-500" /> 
+                <Smartphone className="w-4 h-4 text-slate-400" /> 
                 <span>Limit: 5h</span>
               </div>
               <Button variant="ghost" size="sm" className="hover:bg-muted rounded-lg group" asChild>

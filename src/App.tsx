@@ -9,7 +9,6 @@ import Login from '@/pages/Login';
 import Dashboard from '@/pages/Dashboard';
 import ArchViz from '@/pages/ArchViz';
 import ScreenTime from '@/pages/ScreenTime';
-import Library from '@/pages/Library';
 import Journal from '@/pages/Journal';
 import Progress from '@/pages/Progress';
 import Focus from '@/pages/Focus';
@@ -62,7 +61,6 @@ function App() {
             <Route index element={<Dashboard />} />
             <Route path="archviz" element={<ArchViz />} />
             <Route path="screentime" element={<ScreenTime />} />
-            <Route path="library" element={<Library />} />
             <Route path="journal" element={<Journal />} />
             <Route path="progress" element={<Progress />} />
             <Route path="focus" element={<Focus />} />
