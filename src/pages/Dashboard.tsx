@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Code, BookOpen, Bug, CheckCircle2, Zap, Flame, Clock, Target, Activity, Quote, BatteryCharging, Cpu } from 'lucide-react';
+import { ArrowRight, Code, BookOpen, Bug, CheckCircle2, Zap, Flame, Clock, Target, Activity, Quote, BatteryCharging, Cpu, Smartphone, MonitorSmartphone } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { GitHubCalendar } from 'react-github-calendar';
 import { Tooltip as ReactTooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
 import { useStatsStore } from '@/store/useStatsStore';
 import { useTimerStore } from '@/store/useTimerStore';
-import { useLearning } from '@/store/useLearning';
 
 const quotes = [
   "The secret of getting ahead is getting started. – Mark Twain",
@@ -27,7 +26,7 @@ const fadeIn = {
 
 export default function Dashboard() {
   const { focusSecondsThisWeek, dayStreak } = useStatsStore();
-  const { topics } = useLearning();
+
   
   const [quoteIndex, setQuoteIndex] = useState(0);
   const [time, setTime] = useState(new Date());
@@ -44,8 +43,7 @@ export default function Dashboard() {
     return () => clearInterval(quoteTimer);
   }, []);
 
-  const activeTopic = topics.find(t => t.status === 'active') || topics.find(t => t.status === 'locked');
-  
+
   const getGreeting = () => {
     const hour = time.getHours();
     if (hour < 12) return "Good Morning, Krish 🌿";
@@ -150,46 +148,32 @@ export default function Dashboard() {
           </Card>
         </motion.div>
 
-        {/* AI Learning Focus */}
+        {/* Screen Time Focus */}
         <motion.div initial="hidden" animate="visible" variants={fadeIn} className="space-y-4">
           <div className="flex items-center justify-between">
             <h2 className="text-sm font-medium uppercase tracking-wider text-muted-foreground flex items-center gap-2">
-              <BookOpen className="w-4 h-4" /> 
-              What to learn today
+              <MonitorSmartphone className="w-4 h-4" /> 
+              Screen Time
             </h2>
           </div>
           <Card className="glass-card p-6 flex flex-col justify-between min-h-[180px] hover-glow transition-all duration-300 relative overflow-hidden">
              <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-blue-500/5 rounded-full blur-2xl"></div>
             <div className="relative z-10">
-              {activeTopic ? (
-                <>
-                  <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500 border border-blue-500/20 mb-4">
-                    Up Next
-                  </div>
-                  <h3 className="text-xl font-medium mb-2 text-foreground line-clamp-1">{activeTopic.title}</h3>
-                  <p className="text-muted-foreground/80 text-sm line-clamp-2">
-                    {activeTopic.currentTopic || 'Dive in and learn something new.'}
-                  </p>
-                </>
-              ) : (
-                <>
-                  <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-muted text-muted-foreground border border-border mb-4">
-                    No active topic
-                  </div>
-                  <h3 className="text-xl font-medium mb-2 text-muted-foreground">Roadmap empty...</h3>
-                  <p className="text-muted-foreground/50 text-sm line-clamp-2">
-                    Start adding topics in the Learning section.
-                  </p>
-                </>
-              )}
+              <div className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-500/10 text-blue-500 border border-blue-500/20 mb-4">
+                Within Limits
+              </div>
+              <h3 className="text-xl font-medium mb-2 text-foreground line-clamp-1">3h 45m today</h3>
+              <p className="text-muted-foreground/80 text-sm line-clamp-2">
+                You're keeping your digital footprint clean.
+              </p>
             </div>
             <div className="mt-6 flex items-center justify-between relative z-10">
               <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                <CheckCircle2 className="w-4 h-4 text-blue-500" /> 
-                <span>{topics.filter(t => t.status === 'completed').length} completed</span>
+                <Smartphone className="w-4 h-4 text-blue-500" /> 
+                <span>Limit: 5h</span>
               </div>
               <Button variant="ghost" size="sm" className="hover:bg-muted rounded-lg group" asChild>
-                <Link to="/learning">
+                <Link to="/screentime">
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -248,9 +232,9 @@ export default function Dashboard() {
             </Card>
             <Card className="glass-card p-4 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-blue-500/50 transition-colors">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-              <BookOpen className="w-5 h-5 text-blue-500 mb-2 opacity-70 group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-3xl font-light mb-1">{topics.filter(t => t.status === 'completed').length}</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Topics Done</span>
+              <MonitorSmartphone className="w-5 h-5 text-blue-500 mb-2 opacity-70 group-hover:scale-110 transition-transform duration-300" />
+              <span className="text-3xl font-light mb-1">3.7</span>
+              <span className="text-xs text-muted-foreground uppercase tracking-wider">Screen Hrs</span>
             </Card>
             <Card className="glass-card p-4 flex flex-col justify-center items-center text-center relative overflow-hidden group hover:border-green-500/50 transition-colors">
                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>

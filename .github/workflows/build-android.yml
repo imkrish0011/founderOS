@@ -1,0 +1,58 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: 'npm'
+
+    - name: Setup Java JDK
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '17'
+        cache: 'gradle'
+
+    - name: Install NPM dependencies
+      run: npm install
+
+    - name: Build Web App
+      run: npm run build
+      env:
+        CI: false # Prevents treating warnings as errors in some CI setups
+
+    - name: Capacitor Sync
+      run: |
+        npx cap add android || echo "Android platform already exists"
+        npx cap sync android
+
+    - name: Inject Native ScreenTime Plugin
+      run: |
+        mkdir -p android/app/src/main/java/com/founderos/app/
+        cp ScreenTimePlugin.java android/app/src/main/java/com/founderos/app/ScreenTimePlugin.java
+        
+        # Also, register the plugin in MainActivity.java if needed by Capacitor 2/3 (Capacitor 4+ auto-registers via annotations, so we are good!).
+        
+    - name: Build Android Release APK
+      working-directory: ./android
+      run: ./gradlew assembleDebug
+
+    - name: Upload APK Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: app-debug
+        path: android/app/build/outputs/apk/debug/app-debug.apk
+        retention-days: 7

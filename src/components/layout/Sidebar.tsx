@@ -8,7 +8,7 @@ import { ThemeToggle } from '@/components/ThemeToggle';
 const navItems = [
   { name: 'Dashboard', path: '/', icon: LayoutDashboard },
   { name: 'ArchViz', path: '/archviz', icon: KanbanSquare },
-  { name: 'Learning', path: '/learning', icon: GraduationCap },
+  { name: 'Screen Time', path: '/screentime', icon: GraduationCap },
   { name: 'Library', path: '/library', icon: Library },
   { name: 'Journal', path: '/journal', icon: BookOpen },
   { name: 'Progress', path: '/progress', icon: LineChart },
