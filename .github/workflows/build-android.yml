@@ -37,7 +37,6 @@ jobs:
         VITE_FIREBASE_MESSAGING_SENDER_ID: "636806653730"
         VITE_FIREBASE_APP_ID: "1:636806653730:web:d8d6ade2e450c168c3677b"
         VITE_FIREBASE_MEASUREMENT_ID: "G-FN7H16Z9PD"
-      env:
         CI: false # Prevents treating warnings as errors in some CI setups
 
     - name: Capacitor Sync
