@@ -30,6 +30,14 @@ jobs:
     - name: Build Web App
       run: npm run build
       env:
+        VITE_FIREBASE_API_KEY: "AIzaSyCRaJ7NrhqJCWKc6E8S_1oStNpu4-M5OL4"
+        VITE_FIREBASE_AUTH_DOMAIN: "founderos-208e7.firebaseapp.com"
+        VITE_FIREBASE_PROJECT_ID: "founderos-208e7"
+        VITE_FIREBASE_STORAGE_BUCKET: "founderos-208e7.firebasestorage.app"
+        VITE_FIREBASE_MESSAGING_SENDER_ID: "636806653730"
+        VITE_FIREBASE_APP_ID: "1:636806653730:web:d8d6ade2e450c168c3677b"
+        VITE_FIREBASE_MEASUREMENT_ID: "G-FN7H16Z9PD"
+      env:
         CI: false # Prevents treating warnings as errors in some CI setups
 
     - name: Capacitor Sync
